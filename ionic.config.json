@@ -1,0 +1,8 @@
+{
+		"name": "com.mbdcregistration.www",
+		"integrations": {
+			"cordova": {
+			}
+		},
+		"type": "custom"	
+}

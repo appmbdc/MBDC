@@ -56,7 +56,9 @@ function _phoneGapSettings() {
         "cordova-plugin-alpha-wkwebview-file-xhrhttps://github.com/remoorejr/cordova-plugin-alpha-wkwebview-file-xhr.git": "git",
         "cordova-plugin-zip": "npm",
         "cordova-plugin-x-toast": "npm",
-        "cordova-plugin-whitelist": "npm"
+        "cordova-plugin-whitelist": "npm",
+        "cordova-plugin-camera": "npm",
+        "cordova-plugin-media-capture": "npm"
     }
 };
 }

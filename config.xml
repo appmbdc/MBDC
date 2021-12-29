@@ -210,4 +210,13 @@
  		   <string>This app requires photo library access to access and display photo library pictures.</string>
 		</edit-config>		
 	<!-- end cordova-plugin-media-capture support -->
+	<feature name="https://api.phonegap.com/1.0/file" />
+	<feature name="https://api.phonegap.com/1.0/media" />
+	<plugin name="cordova-plugin-inappbrowser" source="npm" version="3.2.0" />
+	<plugin name="cordova-plugin-media" source="npm" version="5.0.3" />
+	<!-- cordova-plugin-media support -->
+		<edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
+  		  	<string>This app requires access to the microphone for audio recording.</string>
+		</edit-config>
+	<!-- end cordova-plugin-media support -->
 </widget>

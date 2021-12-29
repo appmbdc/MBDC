@@ -59,8 +59,7 @@ function _phoneGapSettings() {
         "cordova-plugin-whitelist": "npm",
         "cordova-plugin-camera": "npm",
         "cordova-plugin-media-capture": "npm",
-        "cordova-plugin-inappbrowser": "npm",
-        "cordova-plugin-media": "npm"
+        "cordova-plugin-inappbrowser": "npm"
     }
 };
 }

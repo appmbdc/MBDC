@@ -57,9 +57,21 @@ function _phoneGapSettings() {
         "cordova-plugin-zip": "npm",
         "cordova-plugin-x-toast": "npm",
         "cordova-plugin-whitelist": "npm",
-        "cordova-plugin-media-capture": "npm",
         "cordova-plugin-inappbrowser": "npm",
-        "cordova-plugin-camera-with-exif": "npm"
+        "cordova-plugin-camera-with-exif": "npm",
+        "cordova-plugin-geolocation": "npm",
+        "phonegap-plugin-barcodescanner": "npm",
+        "com-badrit-contactpicker": "npm",
+        "cordova-openhttps://github.com/remoorejr/cordova-open.git": "git",
+        "cordova-plugin-file-opener2-base64": "npm",
+        "cordova-plugin-touch-id": "npm",
+        "cordova-plugin-media-capture-mp4videohttps://github.com/remoorejr/cordova-plugin-media-capture-mp4video.git": "git",
+        "cordova-media-with-compression": "npm",
+        "cordova-plugin-printerhttps://github.com/remoorejr/cordova-plugin-printer.git": "git",
+        "cordova-sms-plugin": "npm",
+        "cordova-plugin-x-socialsharing": "npm",
+        "cordova-sqlite-ext": "npm",
+        "cordova-plugin-statusbar": "npm"
     }
 };
 }

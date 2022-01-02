@@ -193,7 +193,6 @@
  		   <string>This app requires photo library access to access and display photo library pictures.</string>
 		</edit-config>		
 	<!-- end cordova-plugin-media-capture support -->
-	<feature name="https://api.phonegap.com/1.0/file" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" version="3.2.0" />	<plugin name="cordova-plugin-camera-with-exif" source="npm" />
 	<!-- cordova-plugin-camera support -->
 		<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">

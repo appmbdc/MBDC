@@ -207,23 +207,7 @@
 		<edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
 		    <string>This app requires photo library write access to save pictures in the photo library.</string>
 		</edit-config>
-	<!-- end cordova-plugin-camera support -->
-	<plugin name="cordova-plugin-geolocation" source="npm" version="4.0.2" />
-	<!-- cordova-plugin-geolocation support -->
-		<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-  		  	<string>This app requires access to your location for recording location based information.</string>
-		</edit-config>
-	<!-- end cordova-plugin-geolocation support -->
-	<plugin name="phonegap-plugin-barcodescanner" source="npm" version="7.1.2" />
-	<plugin name="com-badrit-contactpicker" source="npm" />
-	<plugin name="cordova-open" spec="https://github.com/remoorejr/cordova-open.git" source="git" />
+	<!-- end cordova-plugin-camera support -->	<plugin name="cordova-open" spec="https://github.com/remoorejr/cordova-open.git" source="git" />
 	<plugin name="cordova-plugin-file-opener2-base64" source="npm" />
-	<plugin name="cordova-plugin-touch-id" source="npm" />
-	<plugin name="cordova-plugin-media-capture-mp4video" spec="https://github.com/remoorejr/cordova-plugin-media-capture-mp4video.git" source="git" />
-	<plugin name="cordova-media-with-compression" source="npm" />
-	<plugin name="cordova-plugin-printer" spec="https://github.com/remoorejr/cordova-plugin-printer.git" source="git" />
-	<plugin name="cordova-sms-plugin" source="npm" />
-	<plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.6.8" />
-	<plugin name="cordova-sqlite-ext" source="npm" version="0.9.1" />
 	<plugin name="cordova-plugin-statusbar" source="npm" version="2.4.2" />
 </widget>

@@ -24,7 +24,7 @@ function _phoneGapSettings() {
         "BackupWebStorage": "none",
         "iosPersistentFileLocation": "Library",
         "KeyboardDisplayRequiresUserAction": "true",
-        "SurpressesIncrementalRendering": "true",
+        "SuppressesIncrementalRendering": "true",
         "android-maxSdkVersion": "",
         "android-targetSdkVersion": "28",
         "KeepRunning": "true",
@@ -53,15 +53,16 @@ function _phoneGapSettings() {
         "cordova-plugin-network-information": "npm",
         "cordova-plugin-dialogs": "npm",
         "cordova-plugin-splashscreen": "npm",
-        "cordova-plugin-alpha-wkwebview-file-xhrhttps://github.com/remoorejr/cordova-plugin-alpha-wkwebview-file-xhr.git": "git",
+        "cordova-plugin-alpha-wkwebview-file-xhr": "git",
         "cordova-plugin-zip": "npm",
         "cordova-plugin-x-toast": "npm",
         "cordova-plugin-whitelist": "npm",
         "cordova-plugin-inappbrowser": "npm",
         "cordova-plugin-camera-with-exif": "npm",
-        "cordova-openhttps://github.com/remoorejr/cordova-open.git": "git",
+        "cordova-open": "git",
         "cordova-plugin-file-opener2-base64": "npm",
-        "cordova-plugin-statusbar": "npm"
+        "cordova-plugin-statusbar": "npm",
+        "cordova-plugin-androidx-adapter": "npm"
     }
 };
 }

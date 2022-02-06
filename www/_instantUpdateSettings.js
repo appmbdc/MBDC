@@ -1,6 +1,6 @@
 function _instantUpdateSettings() {
 return {
-	"baseLineGUID": "f6ec3e60da4b4d2b9e4f7922e6a34ebf",
+	"baseLineGUID": "38f9e87ef68148499011de91bb040506",
 	"baseURL": "https://phonegapinstantupdate.s3.amazonaws.com/",
 	"displayMessageAfterUpdate": false,
 	"message": "",

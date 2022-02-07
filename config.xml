@@ -192,8 +192,6 @@
 	<!-- end cordova-plugin-camera support -->	<plugin name="cordova-open" spec="https://github.com/remoorejr/cordova-open.git" source="git" />
 	<plugin name="cordova-plugin-statusbar" source="npm" version="2.4.2" />
 	<plugin name="cordova-plugin-androidx-adapter" source="npm" />
-	<feature name="https://api.phonegap.com/1.0/file" />
-	<feature name="https://api.phonegap.com/1.0/network" />
 	<plugin name="cordova-plugin-camera" source="npm" version="4.1.0" />
 	<!-- cordova-plugin-camera support -->
 		<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">

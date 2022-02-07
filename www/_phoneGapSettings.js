@@ -1,6 +1,6 @@
 function _phoneGapSettings() { 
  return {
-    "appId": "com.mbdcregistration.www",
+    "appId": "com.yourcompany.yourapp",
     "preferences": null,
     "plugins": {}
 };

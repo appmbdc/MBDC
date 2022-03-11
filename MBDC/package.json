@@ -1,0 +1,21 @@
+{
+	"name": "com.mbdcregistration.www",
+	"displayName": "Mill Basic Day Camp Registration",
+	"version": "0.0.1",
+	"description": "Registration app for MBDC",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"ecosystem:cordova"
+	],
+	"author": "Daniel And Larry",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"cordova-android": "^9.1.0",
+		    "cordova-ios": "^5.1.1"
+	}
+}
+
+	

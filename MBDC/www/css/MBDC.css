@@ -1,0 +1,294 @@
+input:focus, textarea:focus {
+background-color: #f9f947;
+border-style: none;
+}
+.myTextBox {
+font: 14px Arial Black;
+border: 3px solid;
+border-radius: 3px;
+}
+.myTextBoxMB {
+color: #008080;
+font: 12px Arial black;
+}
+.myTextBox12pxAB {
+color: #000;
+font: 12px Arial black;
+}
+.myTextTag {
+font: bolder 16px Arial Black;
+}
+.myTextTagS {
+font: bolder 12px Arial;
+}
+.myTextTagPurple {
+color: #895685;
+font: 13px Arial Black;
+}
+.myTextTagPurpleD {
+color: #47255e;
+font: 11px Arial Black;
+}
+.myTextTagPurple2 {
+color: #47255e;
+font: 12px Arial Black;
+}
+.myTextTagES {
+font: bold 12px Arial Narrow;
+}
+.myHeadText {
+text-align: center;
+font: bold 14px Arial;
+}
+.myReadOnlyText {
+background-color: #efeaea;
+font: bold 10pt arial;
+}
+.tabNotSel {
+text-decoration: none;
+text-shadow: 1px 1px #ffffff;
+color: Black;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAKUlEQVR42nXKIQ4AMAwDsSr/f+8GJt2VhowZeM59AaMGJ7Y1UtZA+f8XSUo6zWL4K0YAAAAASUVORK5CYII=') repeat-x top #d9dced;
+border: 1px solid #b1b7d5;
+border-bottom-style: none;
+padding: 2px 4px;
+margin-right: 2px;
+margin-bottom: -1px;
+display: block;
+float: left;
+cursor: default;
+border-radius: 2px 2px 0px 0px;
+-moz-border-radius: 2px 2px 0px 0px;
+-webkit-border-radius: 2px 2px 0px 0px;
+outline: none;
+}
+.btn {
+background-color: inherit;
+font-size: 12px;
+border: none;
+padding: 1px 1px;
+display: inline-block;
+cursor: pointer;
+}
+.btn:hover {
+background: #eee;
+}
+.success {
+color: green;
+}
+.info {
+color: dodgerblue;
+}
+.warning {
+color: orange;
+}
+.danger {
+color: red;
+}
+.default {
+color: black;
+}
+.GrPurpleListItemHoverADW {
+color: #800000;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAG0lEQVR42mP48ekf0/9/DJj4PwNWcQYc4mjqAcoRK9jvOgfbAAAAAElFTkSuQmCC') repeat-x top #e4cafe;
+border: 1px solid #c893ff;
+padding: 1px 3px;
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+}
+.GrPurpleListItemSelectedADW {
+color: #3724e4;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAG0lEQVR42mP48ekf0/9/DJj4PwNWcQYc4mjqAcoRK9jvOgfbAAAAAElFTkSuQmCC') repeat-x top #e4cafe;
+border: 1px solid #c893ff;
+padding: 1px 3px;
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+}
+.ListItemLightGreenADW {
+color: #0a0ea3;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAIAAADDbMD2AAAAMElEQVR42l3KMQ4AIAzDQCv/fxxPYWNq0qEssJ1ks89SUgoWWIkfw7SxP5e4f7CIG4p9KKKC1CkxAAAAAElFTkSuQmCC') repeat-x top #ebf8d7;
+border: 2px solid #c893ff;
+padding: 1px 3px;
+border-radius: 2px;
+ccolor: #0a0ea3;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+}
+.GrPurpleListItemSelected_20H {
+color: #3724e4;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAIAAADDbMD2AAAAMElEQVR42l3KMQ4AIAzDQCv/fxxPYWNq0qEssJ1ks89SUgoWWIkfw7SxP5e4f7CIG4p9KKKC1CkxAAAAAElFTkSuQmCC') repeat-x top #e4f1a5;
+border: 2px solid #c893ff;
+padding: 1px 3px;
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+}
+.GrPurpleListItemSelected_32H {
+color: #3724e4;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgCAIAAABch4VNAAAAM0lEQVR42nWMMQoAIBDDQv//OJ/i5nZxOEEXp4YEylwjWgEjvXhZDNRxzV/n28/H1xmpDc+VNbcrjc3PAAAAAElFTkSuQmCC') repeat-x top #e4f1a5;
+border: 2px solid #c893ff;
+padding: 1px 3px;
+border-radius: 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+}
+.GrPurpleListAdw {
+border: 1px solid #c893ff;
+border-collapse: solid;
+}
+.GrPurpleEditAdw {
+color: #a3184b;
+font-size: 8pt;
+border: 0px;
+}
+.GrPurpleButtonAdw {
+text-shadow: 1px 1px #ffffff;
+color: #321d47;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: 10pt Calibri, Tahoma, Arial;
+border: 1px solid #9d52e9;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.GrPurpleButtonRedAdw {
+text-shadow: 1px 1px #ffffff;
+color: #910937;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: 12pt Calibri, Tahoma, Arial;
+border: 2px solid #0e0409;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.GrPurpleButtonBlueAdw {
+text-shadow: 1px 1px #ffffff;
+color: #0e2076;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: bolder 12pt Calibri, Tahoma, Arial;
+border: 2px solid #0e0409;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.GrPurpleButtonBDisabledAdw {
+text-shadow: 1px 1px #ffffff;
+color: #929ee3;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: 12pt Calibri, Tahoma, Arial;
+border: 2px solid #0e0409;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.GrPurpleButtonRDisabledAdw {
+text-shadow: 1px 1px #ffffff;
+color: #dd86a4;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: 12pt Calibri, Tahoma, Arial;
+border: 2px solid #0e0409;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.myCheckBoxPurpleNotC {
+color: #47255e;
+font: 12px Arial Black;
+}
+.myCheckBoxPurpleChk {
+color: #d00d3c;
+font: 12px Arial Black;
+}
+.myFrameLabel {
+text-align: center;
+color: #610c5d;
+font: 12px Arial Black;
+}
+.myButtonLabel {
+text-align: center;
+text-shadow: 1px 1px #ffffff;
+color: #610c5d;
+background: #d9cae9;
+font: 12px Arial Black;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.GrPurpleButtonBlueMobADW {
+text-shadow: 1px 1px #ffffff;
+color: #0e2076;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: bolder 16pt Arial Black;
+border: 2px solid #0e0409;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.GrPurpleButtonBDisabledMobAdw {
+text-shadow: 1px 1px #ffffff;
+color: #929ee3;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAALUlEQVR42mXKIQ4AMBACQcL/n1pTVcfWoO4UyTK65znBBIO6mMhAP7Vtk+FrPkJIOriD6FNuAAAAAElFTkSuQmCC') repeat-x top #d9cae9;
+font: 18pt Calibri, Tahoma, Arial;
+border: 2px solid #0e0409;
+padding: 2px 4px;
+vertical-align: middle;
+border-radius: 4px;
+box-sizing: border-box;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+.myTextTagMob {
+font-size: 15pt;
+font-weight: bold;
+}
+.myLabelMob {
+font-size: 12pt;
+font-weight: bold;
+}

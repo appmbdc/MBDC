@@ -49,7 +49,6 @@ function _phoneGapSettings() {
         "splash-screen-duration": "5000"
     },
     "plugins": {
-        "cordova-plugin-camera": "npm",
         "cordova-plugin-device": "npm",
         "cordova-plugin-file": "npm",
         "cordova-plugin-file-transfer": "npm",
@@ -57,7 +56,9 @@ function _phoneGapSettings() {
         "cordova-plugin-dialogs": "npm",
         "cordova-plugin-splashscreen": "npm",
         "cordova-plugin-alpha-wkwebview-file-xhr": "git",
-        "cordova-plugin-androidx-adapter": "npm"
+        "cordova-plugin-androidx-adapter": "npm",
+        "cordova-plugin-camera-with-exif": "npm",
+        "cordova-plugin-whitelist": "npm"
     }
 };
 }

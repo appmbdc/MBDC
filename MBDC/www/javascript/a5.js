@@ -1,6 +1,6 @@
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -231,7 +231,7 @@ var ele=$(ele);if(!ele)return false;var e=typeof arguments[2]!='undefined'?argum
 return;}
 if(ele['on'+evntType])ele['on'+evntType](e);for(var i=0;i<$e._e.length;i++){if($e._e[i]){if($e._e[i][0]==ele&&$e._e[i][1]==evntType){$e._e[i][3](e);}}}},executeGroup:function(gName){for(var i=0;i<$e._e.length;i++){var eObj=$e._e[i];if(eObj){if(eObj[6]==gName)eObj[3]();}}},getEvent:function(e){var evnt=e||window.event;return evnt},getCharCode:function(e){e=$e.getEvent(e);return e.charCode||e.keyCode;},getTouches:function(e){if(e.originalEvent){if(e.originalEvent.touches&&e.originalEvent.touches.length)return e.originalEvent.touches;else if(e.originalEvent.changedTouches&&e.originalEvent.changedTouches.length)return e.originalEvent.changedTouches;}else{if(e.touches||e.changedTouches){if(e.touches.length)return e.touches;else if(e.changedTouches.length)return e.changedTouches;}}
 return null;},getCoors:function(e){var coors={};var tempT=$e.getTouches(e);if(tempT){if(tempT.length){coors.clientX=tempT[0].clientX;coors.clientY=tempT[0].clientY;return coors;}}
-coors.clientX=e.clientX;coors.clientY=e.clientY;return coors;},stopEvent:function(e){e=$e.getEvent(e);$e.stopPropagation(e);$e.preventDefault(e);},stopPropagation:function(e){e=$e.getEvent(e);if(typeof e.cancelable!=='boolean'||e.cancelable){if(e.stopPropagation)e.stopPropagation();else e.cancelBubble=true;}},preventDefault:function(e){e=$e.getEvent(e);if(typeof e.cancelable!=='boolean'||e.cancelable){if(e.preventDefault)e.preventDefault();else e.returnValue=false;}},_wf:function(eEle,eType,eFn){for(var i=0;i<$e._e.length;i++){if($e._e[i])
+coors.clientX=e.clientX;coors.clientY=e.clientY;return coors;},stopEvent:function(e){e=$e.getEvent(e);$e.stopPropagation(e);$e.preventDefault(e);},stopPropagation:function(e){e=$e.getEvent(e);if(e.stopPropagation)e.stopPropagation();else e.cancelBubble=true;},preventDefault:function(e){e=$e.getEvent(e);if(e.preventDefault)e.preventDefault();else e.returnValue=false;},_wf:function(eEle,eType,eFn){for(var i=0;i<$e._e.length;i++){if($e._e[i])
 if($e._e[i][0]==eEle&&$e._e[i][1]==eType&&$e._e[i][2]==eFn)return i;}
 return-1},_pageLoad:function(){if(!$e.loaded){$e.loaded=true;for(var i=0;i<$e._de.length;i++)$e.add.call($e,$e._de[i][0],$e._de[i][1],$e._de[i][2],$e._de[i][3],$e._de[i][4],$e._de[i][5]);for(var i=0;i<$e._dee.length;i++)$e.execute.apply($e,$e._dee[i]);if($e.onLoaded.constructor==Function)$e.onLoaded();}},_pageUnload:function(e){for(var i=0;i<$e._ue.length;i++){if($e._ue[i]){$e._ue[i][3](e);delete $e._ue[i][0];delete $e._ue[i][3];delete $e._ue[i][2];delete $e._ue[i];}}
 for(var i=0;i<$e._e.length;i++){if($e._e[i]){if($e._e[i][0])$e.remove($e._e[i][0],$e._e[i][1],$e._e[i][2],i);}}},_aetDown:function(e){$e._ae[this.id].dt=new Date().getTime();$e._aeDown(this,e);},_aemDown:function(e){if($e._ae[this.id]){if($e._ae[this.id].dt){if(new Date().getTime()-$e._ae[this.id].dt<1000){$e._ae[this.id].dt=false;return;}}}
@@ -257,7 +257,7 @@ return trans;}}
 $a._def={};$a.lastCallback=new Date().getTime();$a._rh={_eval:function(obj){if(obj.responseText)eval(obj.responseText);},_error:function(obj){var pText=obj.responseText;if(pText.search('</body>')!=-1)pText=$u.s.word($u.s.word(pText,2,'<body>'),1,'</body>');var pText=$u.s.aTrim(pText.replace(/(<([^>]+)>)/ig,''),'\n\r  ');if(pText!='')alert('XHTTPRequest Error:\n\n'+pText);}}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -304,7 +304,7 @@ if(tempHeight!=AUI.Resize._s.height){if(AUI.Resize._s.type.indexOf('t')!=-1){res
 if(resized){AUI.Resize._s.x=dObj.offsetLeft;AUI.Resize._s.x=dObj.offsetHeight;AUI.Resize._s.width=tempWidth;AUI.Resize._s.height=tempHeight;if(AUI.Resize._s.whileResize.constructor==Function){AUI.Resize._s.whileResize(evnt,AUI.Resize._s);}}},_endResize:function(e){var evnt=e||window.event;$e.stopEvent(evnt);$e.remove(document,'mouseup',AUI.Resize._endResize);$e.remove(document,'mousemove',AUI.Resize._whileResize);if(AUI.Resize._s.onResizeEnd.constructor==Function)AUI.Resize._s.onResizeEnd(evnt,AUI.Resize._s);AUI.Resize._s.active=false;}}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -617,7 +617,7 @@ var O=Object(this);var len=O.length>>>0;var start=arguments[1];var relativeStart
 return O;}}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -704,7 +704,7 @@ return res;}}});A5.u.css.transform2D=function(x,y){if(typeof x=='number')x=x+'px
 if(document.all&&navigator.appName!='Opera'&&!window.atob)A5.u.css.supportsTransition=false;else A5.u.css.supportsTransition=true;if(A5.flags.isFireFox)A5.u.css.properties={transform:'-moz-transform',transformDOM:'MozTransform',transitionDOM:'MozTransition',transitionEndEvent:'transitionend'};else if(A5.flags.isOpera)A5.u.css.properties={transform:'-o-transform',transformDOM:'OTransform',transitionDOM:'OTransition',transitionEndEvent:'oTransitionEnd'};else if(A5.flags.isWebKit)A5.u.css.properties={transform:'-webkit-transform',transformDOM:'webkitTransform',transitionDOM:'webkitTransition',transitionEndEvent:'webkitTransitionEnd'};else A5.u.css.properties={transform:'transform',transformDOM:'transform',transitionDOM:'transition',transitionEndEvent:'transitionend'};}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -727,7 +727,7 @@ return e;},update:function(e,i){e=$(e);if(!e)return false;if(typeof i!='string')
 if(i.t=='cls'){if(tn!=this._.cls.tag)return false;e.className=i.i;}else if(i.t=='svg'){if(tn!='svg')return false;if(e.childNodes){e.childNodes[0].setAttributeNS('http://www.w3.org/1999/xlink','href',i.i);}}else e.src=i.i;}}}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -794,7 +794,7 @@ if(dd){for(var i=0;i<=data.length-1;i++){t['*p']=[{type:'array',property:'root',
 var result=t.result.join('');result=result.replace(this._.re.curOPH,'{');result=result.replace(this._.re.curCPH,'}');result=result.replace(this._.re.colPH,':');result=result.replace(this._.re.pipePH,'|');t.result=[];t['*c']=0;return result;}}}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -1172,7 +1172,7 @@ if(typeof this.onShow=='function')this.onShow();if(typeof ls.onShow=='function')
 if(typeof ls.onBeforeHide=='function'){var res=ls.onBeforeHide.call(this);if(typeof res=='boolean'&&!res){if(this._.state!='showing')this._.state='idle';return false;}}
 A5.transients._.showHide(this,'hide');this._.tEle.style.display='none';var st=this.state;if(st.state!='hidden')st.state='hiding';var ti=A5.transients._.t.indexOf(this._.id);if(ti!=-1)A5.transients._.t.splice(ti,1);if(ls.type=='insert'&&st.target.type=='element'){var t=$(st.target.id);if(t){if(ls.to=='replace')t.style.display=this._.td||'';else if(ls.to=='replace-content'){for(var i=1;i<t.children.length;i++){t.children[i].style.display=this._.td[i]||'';}}}}
 if(typeof this.onHide=='function')this.onHide();if(typeof ls.onHide=='function')ls.onHide.call(this);}
-return true;}});A5.TabBand=Class.create();A5.TabBand.prototype={initialize:function(ctrlId,items){var settings=typeof arguments[2]=='object'?arguments[2]:{};$u.o.assign(this,{override:'base',location:'top',className:'',separator:{className:'',show:false},tab:{close:false,closeBehavior:'remove',className:'',selectedClassName:'',disabledClassName:'',closeClassName:'',closeIcon:'',closeHoverIcon:'',closeIconStyle:0},scrollButtons:{overlay:false,fullHeight:false,prevClassName:'',prevDisabledClassName:'',prevImage:'',prevDisabledImage:'',nextClassName:'',nextDisabledClassName:'',nextImage:'',nextDisabledImage:''},tools:{className:'',items:[]},onBeforeChange:0,onChange:0,onBeforeLeave:0,onLeave:0,onRightClick:0,onInitial:0,onBeforeAdd:0,onAdd:0,onBeforeRemove:0,onRemove:0,onBeforeHide:0,onHide:0,onBeforeShow:0,onShow:0},true);if(typeof settings.theme!='undefined')A5.themes.assign(this,settings.theme,'tabBand');if(typeof settings.className!='undefined'){if(settings.className.charAt(0)=='+')settings.className=this.className+' '+settings.className.substr(1);}
+return true;}});A5.TabBand=Class.create();A5.TabBand.prototype={initialize:function(ctrlId,items){var settings=typeof arguments[2]=='object'?arguments[2]:{};$u.o.assign(this,{override:'base',location:'top',className:'',separator:{className:'',show:false},tab:{close:false,closeBehavior:'remove',className:'',selectedClassName:'',disabledClassName:'',closeClassName:'',closeIcon:'',closeHoverIcon:'',closeIconStyle:0},scrollButtons:{overlay:false,fullHeight:false,prevClassName:'',prevDisabledClassName:'',prevImage:'',prevDisabledImage:'',nextClassName:'',nextDisabledClassName:'',nextImage:'',nextDisabledImage:''},tools:{className:'',items:[]},onBeforeChange:0,onChange:0,onBeforeLeave:0,onLeave:0,onRightClick:0,onInitial:0,onBeforeRemove:0,onRemove:0,onBeforeHide:0,onHide:0,onBeforeShow:0,onShow:0},true);if(typeof settings.theme!='undefined')A5.themes.assign(this,settings.theme,'tabBand');if(typeof settings.className!='undefined'){if(settings.className.charAt(0)=='+')settings.className=this.className+' '+settings.className.substr(1);}
 if(typeof settings.separator!='undefined'){if(typeof settings.separator.className!='undefined'){if(settings.separator.className.charAt(0)=='+')settings.separator.className=this.separator.className+' '+settings.separator.className.substr(1);}}
 if(typeof settings.tab!='undefined'){if(typeof settings.tab.className!='undefined'){if(settings.tab.className.charAt(0)=='+')settings.tab.className=this.tab.className+' '+settings.tab.className.substr(1);}
 if(typeof settings.tab.selectedClassName!='undefined'){if(settings.tab.selectedClassName.charAt(0)=='+')settings.tab.selectedClassName=this.tab.selectedClassName+' '+settings.tab.selectedClassName.substr(1);}
@@ -1186,7 +1186,7 @@ d.tEle.style.left=val+'px';},onEnd:function(d,e){$e.stopEvent(e);$e.execute(this
 var tblEle=document.createElement('table');tblEle.id=this.ctrlId+'.TABTABLE';this._tblEle=tblEle;tblEle.cellSpacing=0;tblEle.cellPadding=0;tblEle.style.position='relative';ele.appendChild(tblEle);tblEle.insertRow(0);var ptbEle=document.createElement('div');ptbEle.id=this.ctrlId+'.PTOOLBAR';this._ptbEle=ptbEle;ptbEle.style.position='absolute';ptbEle.style.left='0px';if(this.scrollButtons.fullHeight)ptbEle.style.height='100%';if(this.location=='bottom')ptbEle.style.top='0px';else ptbEle.style.bottom='0px';var ntbEle=document.createElement('div');ntbEle.id=this.ctrlId+'.NTOOLBAR';this._ntbEle=ntbEle;ntbEle.style.position='absolute';ntbEle.style.right='0px';if(this.scrollButtons.fullHeight)ntbEle.style.height='100%';if(this.location=='bottom')ntbEle.style.top='0px';else ntbEle.style.bottom='0px';ele.appendChild(ptbEle);ele.appendChild(ntbEle);var pbEle=document.createElement('a');pbEle.id=this.ctrlId+'.PREV';this._pbEle=pbEle;pbEle.className=this.scrollButtons.prevClassName;pbEle.innerHTML=A5.u.icon.html(this.scrollButtons.prevImage,'id="'+this.ctrlId+'.PREVIMG" style="border: none;"');pbEle.style.display='none';ptbEle.appendChild(pbEle);$e.add(pbEle,A5.d.evnts.click,this._scrollPrev,this,true);$e.add(pbEle,A5.d.evnts.dblClick,this._scrollPrev,this,true);var nbEle=document.createElement('a');nbEle.id=this.ctrlId+'.NEXT';this._nbEle=nbEle;nbEle.className=this.scrollButtons.nextClassName;nbEle.innerHTML=A5.u.icon.html(this.scrollButtons.nextImage,'id="'+this.ctrlId+'.NEXTIMG" style="border: none;"');nbEle.style.display='none';ntbEle.appendChild(nbEle);$e.add(nbEle,A5.d.evnts.click,this._scrollNext,this,true);$e.add(nbEle,A5.d.evnts.dblClick,this._scrollNext,this,true);this._firstTabIndx=-1;this._lastTabIndx=-1;this._items=new Array();for(var i=0;i<items.length;i++){this._add(items[i]);}
 this._firstTabIndx=this._getFirstAvailableTab();this._lastTabIndx=this._getLastAvailableTab();this._canScroll=false;this._scrollTab=this._firstTabIndx;this._scrollOffset=0;this._scrollTempOffset=0;this._scrollAnimateInc=0;this._scrollTO=0;this._scrollRJ=false;this._canScrollNext=true;this._canScrollPrev=false;this._setScrollDisabled('p',false);if(this.separator.show){var sepEle=document.createElement('div');sepEle.className=this.separator.className;if(this.location=='bottom'){ele.insertBefore(sepEle,ele.firstChild);ptbEle.style.top=sepEle.offsetHeight+'px';ntbEle.style.top=sepEle.offsetHeight+'px';}else{ele.appendChild(sepEle);ptbEle.style.bottom=sepEle.offsetHeight+'px';ntbEle.style.bottom=sepEle.offsetHeight+'px';}
 ptbEle.style.display='none';ptbEle.style.display='';ntbEle.style.display='none';ntbEle.style.display='';}
-this.refresh();this.value='';$e.add(window,'resize',this.refresh,this,true);},add:function(tObj){var fResult=true;if(this.onBeforeAdd.constructor==Function)fResult=this.onBeforeAdd.call(this,tObj);if(fResult||typeof fResult=='undefined'){this._add(tObj);this._firstTabIndx=this._getFirstAvailableTab();this._lastTabIndx=this._getLastAvailableTab();this.refresh();if(this.onAdd.constructor==Function)this.onAdd.call(this,tObj);}},_add:function(tObj){tObj=this._parseTab(tObj);var tIndx=this._items.length;this._items.push(tObj);var tbEle=this._ele;var tEle=document.createElement('a');tEle.href="#";tEle.className=this._gDef(tObj.className,this.tab.className);if(tObj.disabled)$acn(tEle,this._gDef(tObj.disabledClassName,this.tab.disabledClassName));if(!tObj.show)tEle.style.display='none';tEle.innerHTML='<span>&nbsp;'+tObj.html+'&nbsp;</span>';if(tObj.close){var iEle=A5.u.icon.element(this._gDef(tObj.closeIcon,this.tab.closeIcon));var cStyle=this._gDef(tObj.closeIconStyle,this.tab.closeIconStyle);if(typeof cStyle=='string'||typeof cStyle=='object')$ss(iEle,cStyle);iEle.style.verticalAlign='top';iEle.style.borderStyle='none';tEle.appendChild(iEle);$acn(tEle,this._gDef(tObj.closeClassName,this.tab.closeClassName));if(!A5.flags.isMobile){$e.add(iEle,'mouseover',this._closeMOver,this);$e.add(iEle,'mouseout',this._closeMOut,this);}
+this.refresh();this.value='';$e.add(window,'resize',this.refresh,this,true);},add:function(tObj){this._add(tObj);this._firstTabIndx=this._getFirstAvailableTab();this._lastTabIndx=this._getLastAvailableTab();this.refresh();},_add:function(tObj){tObj=this._parseTab(tObj);var tIndx=this._items.length;this._items.push(tObj);var tbEle=this._ele;var tEle=document.createElement('a');tEle.href="#";tEle.className=this._gDef(tObj.className,this.tab.className);if(tObj.disabled)$acn(tEle,this._gDef(tObj.disabledClassName,this.tab.disabledClassName));if(!tObj.show)tEle.style.display='none';tEle.innerHTML='<span>&nbsp;'+tObj.html+'&nbsp;</span>';if(tObj.close){var iEle=A5.u.icon.element(this._gDef(tObj.closeIcon,this.tab.closeIcon));var cStyle=this._gDef(tObj.closeIconStyle,this.tab.closeIconStyle);if(typeof cStyle=='string'||typeof cStyle=='object')$ss(iEle,cStyle);iEle.style.verticalAlign='top';iEle.style.borderStyle='none';tEle.appendChild(iEle);$acn(tEle,this._gDef(tObj.closeClassName,this.tab.closeClassName));if(!A5.flags.isMobile){$e.add(iEle,'mouseover',this._closeMOver,this);$e.add(iEle,'mouseout',this._closeMOut,this);}
 $e.add(iEle,A5.d.evnts.click,this._close,this);}
 var tblEle=this._tblEle;var cellIndx=tblEle.rows[0].cells.length;tblEle.rows[0].insertCell(cellIndx);tblEle.rows[0].cells[cellIndx].appendChild(tEle);$e.add(tEle,A5.d.evnts.click,this._click,this);$e.add(tEle,'click',function(e){$e.preventDefault(e);return false;});$e.add(tEle,'contextmenu',this._rClick,this);},insert:function(tObj,tId){var tIndx=this._getTabIndex(tId);tObj=this._parseTab(tObj);this._items.splice(tIndx,0,tObj);var tbEle=this._ele;var tEle=document.createElement('a');tEle.href="#";tEle.className=this._gDef(tObj.className,this.tab.className);if(tObj.disabled)$acn(tEle,this._gDef(tObj.disabledClassName,this.tab.disabledClassName));if(!tObj.show)tEle.style.display='none';tEle.innerHTML='<span>&nbsp;'+tObj.html+'&nbsp;</span>';if(tObj.close){var iEle=A5.u.icon.element(this._gDef(tObj.closeIcon,this.tab.closeIcon));var cStyle=this._gDef(tObj.closeIconStyle,this.tab.closeIconStyle);if(typeof cStyle=='string'||typeof cStyle=='object')$ss(iEle,cStyle);iEle.style.verticalAlign='top';iEle.style.borderStyle='none';tEle.appendChild(iEle);$acn(tEle,this._gDef(tObj.closeClassName,this.tab.closeClassName));if(!A5.flags.isMobile){$e.add(iEle,'mouseover',this._closeMOver,this);$e.add(iEle,'mouseout',this._closeMOut,this);}
 $e.add(iEle,A5.d.evnts.click,this._close,this);}
@@ -1240,9 +1240,9 @@ var indx=-1;for(var i=0;i<this._panes.length;i++){if(this._panes[i]._id==item.va
 var userResult=true
 if(indx>-1){if(typeof this._panes[indx].onBeforeRemove=='function')userResult=this._panes[indx].onBeforeRemove.call(this._tbObj,this._panes[indx]);}
 return result&&userResult;}
-if(typeof this.tabBand.onRemove=='function')this.tabBand._onRemove=this.tabBand.onRemove;this.tabBand.onRemove=function(item){var indx=-1;for(var i=0;i<this._panes.length;i++){if(this._panes[i]._id==item.value){indx=i;break;}}
+this.tabBand.onRemove=function(item){var indx=-1;for(var i=0;i<this._panes.length;i++){if(this._panes[i]._id==item.value){indx=i;break;}}
 if(indx>-1){if(typeof this._panes[indx].onRemove=='function')this._panes[indx].onRemove.call(this._tbObj,this._panes[indx]);if(typeof document.documentElement.style.opacity!='undefined'||!(document.all&&navigator.appName!='Opera')){var name=this._panes[indx].name.toUpperCase();if(item.paneType=='grid'&&window[name+'_GridObj']){window[name+'_GridObj']._destroy();eval('delete '+name+'_GridObj');}else if(item.paneType=='dialog2'&&window[name+'_DlgObj']){window[name+'_DlgObj']._destroy();eval(name+'_DlgObj = false; try{delete '+name+'_DlgObj;}catch(err){}');}else if(item.paneType=='customComponent'&&window[name+'_CustObj']){window[name+'_CustObj']._destroy();eval('delete '+name+'_CustObj');}}}
-$(this.tbiId+'.PANES').removeChild($(item.value));this._panes.splice(indx,1);if(typeof this._onRemove)this._onRemove(item);}
+$(this.tbiId+'.PANES').removeChild($(item.value));this._panes.splice(indx,1);}
 this._tbObj=new A5.TabBand(tbiId+'.TABBAND',[],this.tabBand);this._tbObj.tbiId=tbiId;$(this.tbiId+'.TABBAND').style.display='none';this._tbObj._panes=[];this._curPaneId='';this._paneIndx=0;this._rlTO=0;if($(this.tbiId+'.CLOSE'))$(this.tbiId+'.PREV').src=this._tbObj.tab.closeIcon;if($(this.tbiId+'.PREV'))$(this.tbiId+'.PREV').src=this._tbObj.scrollButtons.prevImage;if($(this.tbiId+'.NEXT'))$(this.tbiId+'.NEXT').src=this._tbObj.scrollButtons.nextImage;if(this.fill){$e.add(document.body,'load',this._refreshLayout,this,true);$e.add(window,'resize',this._refreshLayout,this,true);}},add:function(pSettings){$u.o.assign(pSettings,this._dPane,true);pSettings._id=this.tbiId+'.PANE.'+this._paneIndx;if(pSettings.title=='')pSettings.title=pSettings.name;else if(pSettings.name=='')pSettings.name=pSettings.title;if(!pSettings.multiple){for(var i=0;i<this._tbObj._panes.length;i++){if(pSettings.name==this._tbObj._panes[i].name){this._tbObj.select(this._tbObj._panes[i]._id);this._tbObj.setHTML(i,pSettings.title);if(this._tbObj._panes[i].autoRefreshOnAdd&&!this._tbObj._panes[i].autoRefresh){if(this._tbObj._panes[i].type=='static'){$(this.value+'.CONTENT').innerHTML=this._tbObj._panes[i].html;}else if(this._tbObj._panes[i].type=='dynamic'){$(this.value+'.CONTENT').innerHTML=this._tbObj._panes[i].html;var data=this._tbObj._panes[i].data+$if(this._tbObj._panes[i].data!='','&','')+A5.ajax.buildURLParam('_containerId',this._tbObj._panes[i]._id+'.CONTENT');A5.ajax.callback(this._tbObj._panes[i].url,data);}else if(this._tbObj._panes[i].type=='url'){var url=this._tbObj._panes[i].url
 if(this._tbObj._panes[i].data!='')url=url+'?'+this._tbObj._panes[i].data;$(pSettings._id+'.PANE').src=A5.ajax.addURLRequiredData(url);}else if(this._tbObj._panes[i].type=='grid'){var data=this._tbObj._panes[i].data;$u.o.assign(data,{gridDiv:this._tbObj._panes[i]._id+'.CONTENT'});A5.component.runGrid(data);}else if(this._tbObj._panes[i].type=='dialog2'||this._tbObj._panes[i].type=='customComponent'){var data=this._tbObj._panes[i].data;var divIDProp=this._tbObj._panes[i].type+'Div';data[divIDProp]=this._tbObj._panes[i]._id+'.CONTENT'
 A5.component.runGenericComponent(data);}else if(this._tbObj._panes[i].type=='report'){var data=this._tbObj._panes[i].data;$u.o.assign(data,{reportIFrame:this._tbObj._panes[i]._id+'.PANE'});A5.component.runReport(data);}else if(pSettings.type=='htmlReport'){var data=this._tbObj._panes[i].data;$u.o.assign(data,{reportDiv:this._tbObj._panes[i]._id+'.CONTENT'});A5.component.runReport(data);}}
@@ -1252,7 +1252,7 @@ pEle.appendChild(cEle);var ele=document.createElement('div');ele.id=pSettings._i
 A5.component.runGenericComponent(data);}else if(pSettings.type=='htmlReport'){var data=pSettings.data;$u.o.assign(data,{reportDiv:pSettings._id+'.CONTENT'});A5.component.runReport(data);}}else if(pSettings.type=='url'||pSettings.type=='report'){ele=document.createElement('iframe');ele.id=pSettings._id+'.PANE';ele.frameBorder='0';ele.border='0';ele.style.width='100%';ele.style.margin='0px';ele.style.marginBottom='-2px';ele.style.height='0px';var url=pSettings.url;if(pSettings.data!='')url=url+'?'+pSettings.data;cEle.appendChild(ele);if(pSettings.type=='report'){var data=pSettings.data;$u.o.assign(data,{reportIFrame:pSettings._id+'.PANE'});A5.component.runReport(data);}else{ele.src=url;}}else if(this._tbObj._panes.length==0){pEle.innerHTML='';$(this.tbiId+'.TABBAND').style.display='none';return false;}
 ele=document.createElement('div');ele.id=pSettings._id+'.FOOTER';ele.className=this._gDef(pSettings.footer.className,this.pane.footer.className);tStyle=$if(pSettings.footer.style!=0,pSettings.footer.style,this.pane.footer.style);if(typeof tStyle=='object'||typeof tStyle=='string')$ss(ele,tStyle);if(!pSettings.footer.show)ele.style.display='none';ele.innerHTML=pSettings.footer.html;cEle.appendChild(ele);this._tbObj._panes.push(pSettings);var userDefinedTabClassName='';var userDefinedTabSelectedClassName='';if(typeof pSettings.tabButtonCSS!='undefined'){if(typeof pSettings.tabButtonCSS.className!='undefined')userDefinedTabClassName=pSettings.tabButtonCSS.className;}
 if(typeof pSettings.tabButtonCSS!='undefined'){if(typeof pSettings.tabButtonCSS.selectedClassName!='undefined')userDefinedTabSelectedClassName=pSettings.tabButtonCSS.selectedClassName;}
-var addObj={html:pSettings.title,value:pSettings._id,name:pSettings.name,objectName:pSettings.objectName,paneType:pSettings.type,close:pSettings.close,onRightClick:pSettings.onRightClick,onInitial:pSettings.onInitial,className:this._tbObj.tab.className+' '+userDefinedTabClassName,selectedClassName:this._tbObj.tab.selectedClassName+' '+userDefinedTabSelectedClassName}
+var addObj={html:pSettings.title,value:pSettings._id,name:pSettings.name,paneType:pSettings.type,close:pSettings.close,onRightClick:pSettings.onRightClick,onInitial:pSettings.onInitial,className:this._tbObj.tab.className+' '+userDefinedTabClassName,selectedClassName:this._tbObj.tab.selectedClassName+' '+userDefinedTabSelectedClassName}
 this._tbObj.add(addObj);var tARef=pSettings.autoRefresh;pSettings.autoRefresh=false;this._tbObj.select(pSettings._id);pSettings.autoRefresh=tARef;this._tbObj._panes.autoRefresh=tARef;this._paneIndx++;this._showMenu(false);return true;},getElement:function(paneName){var part=typeof arguments[1]!='undefined'?arguments[1]:'';var idPrefix='';var type='';for(var i=0;i<this._tbObj._panes.length;i++){if(paneName==this._tbObj._panes[i].name){idPrefix=this._tbObj._panes[i]._id;type=this._tbObj._panes[i].type;}}
 if(idPrefix!=''){if(part=='header')return $(idPrefix+'.HEADER');else if(part=='footer')return $(idPrefix+'.FOOTER');else{if(type=='url'||type=='report')return $(idPrefix+'.PANE');else return $(idPrefix+'.CONTENT');}}
 return false;},_showMenu:function(val){if(this.compact){$(this.tbiId+'.TITLEPANEL').style.height='';if(val){$(this.tbiId+'.TITLEPANEL').style.height=$(this.tbiId+'.TITLEPANEL').offsetHeight+'px';$(this.tbiId+'.MENUPANEL').style.display='';$(this.tbiId+'.CONTENTPANEL').style.display='none';$(this.tbiId+'.PANETITLE').style.display='none';$(this.tbiId+'.MENUTITLE').style.display='';}else{$(this.tbiId+'.MENUPANEL').style.display='none';$(this.tbiId+'.CONTENTPANEL').style.display='';$(this.tbiId+'.PANETITLE').style.display='';$(this.tbiId+'.MENUTITLE').style.display='none';}}
@@ -1365,8 +1365,8 @@ if(v.constructor==Object){var type=v.select;if(type=='all'){v=[].concat(this._i.
 if(v.additive){vn=vn.concat(this.value);vn=$u.a.dedup(vn);}
 v=vn;}else v=[];}
 var ids=[];if(v.constructor!=Array)v=[v];if(!this.multiple)v=[v[0]];var iIds=false;var vi=-1;for(var i=0;i<v.length;i++){tIds=this._valueToId(v[i]);if(tIds){ids=ids.concat(tIds);if(v[i][0]=='#'){vi=this._i.ids.indexOf(tIds[0]);if(vi>-1)v[i]=this._i.v[vi];}}}
-var oVal=this.value.join('||');this._deselAll();if(this.allowAnyValue)this.value=[].concat(v);this._sel(ids,es,oVal,e);if(this.allowAnyValue)this.value=v;if(!this.allowNullSelection&&this._i.ids.length!=0&&this._s.id.length==0)this.navigate('first');},setLayout:function(layout){if(typeof this.layouts[layout]!='undefined'){var keepVal=typeof arguments[1]!='undefined'?arguments[1]:true;var anim=typeof arguments[2]!='undefined'?arguments[2]:false;this.layout=layout;this.refresh(keepVal,anim);}},updateLayout:function(layout,s){var ls=this.layouts[layout];if(ls){A5.u.object.assign(ls,s);delete ls._t;if(this.layout==layout){var keepVal=typeof arguments[2]!='undefined'?arguments[2]:true;var anim=typeof arguments[3]!='undefined'?arguments[3]:false;this.refresh(keepVal,anim);}}},setDisabled:function(b){if(this.disabledClassName!=''){if(b)$acn(this.contId,this.disabledClassName);else $rcn(this.contId,this.disabledClassName);}
-this.disabled=b;},scrollToItem:function(v){var tIds=this._valueToId(v);if(tIds){var ele=$(tIds[0]);if(ele){var cEle=this.wrapper.allow?$(this.contId+'.CONTENT').parentNode:$(this.contId);var s=typeof arguments[1]!='undefined'?arguments[1]:{};A5.u.element.setScroll(cEle,ele,s);}}},setElementDisabled:function(v,b){var ids=this._valueToId(v);if(ids){var ele=false;var v=[].concat(this.value);var setVal=false;var ia='';for(var i=0;i<ids.length;i++){ele=$(ids[i]);$sa(ele,'a5-disabled',''+b);ele.disabled=b;ia=$ga(ele,'a5-item');ia=ia.split(':').shift();var cn=this._getItemObj(ia).disabledClassName;if(cn!=''){if(b)$acn(ele,cn);else $rcn(ele,cn);}
+var oVal=this.value.join('||');this._deselAll();if(this.allowAnyValue)this.value=[].concat(v);this._sel(ids,es,oVal,e);if(this.allowAnyValue)this.value=v;},setLayout:function(layout){if(typeof this.layouts[layout]!='undefined'){var keepVal=typeof arguments[1]!='undefined'?arguments[1]:true;var anim=typeof arguments[2]!='undefined'?arguments[2]:false;this.layout=layout;this.refresh(keepVal,anim);}},updateLayout:function(layout,s){var ls=this.layouts[layout];if(ls){A5.u.object.assign(ls,s);delete ls._t;if(this.layout==layout){var keepVal=typeof arguments[2]!='undefined'?arguments[2]:true;var anim=typeof arguments[3]!='undefined'?arguments[3]:false;this.refresh(keepVal,anim);}}},setDisabled:function(b){if(this.disabledClassName!=''){if(b)$acn(this.contId,this.disabledClassName);else $rcn(this.contId,this.disabledClassName);}
+this.disabled=b;},scrollToItem:function(v){var tIds=this._valueToId(v);if(tIds){var ele=$(tIds[0]);if(ele){var cEle=$(this.contId);var s=typeof arguments[1]!='undefined'?arguments[1]:{};A5.u.element.setScroll(cEle,ele,s);}}},setElementDisabled:function(v,b){var ids=this._valueToId(v);if(ids){var ele=false;var v=[].concat(this.value);var setVal=false;var ia='';for(var i=0;i<ids.length;i++){ele=$(ids[i]);$sa(ele,'a5-disabled',''+b);ele.disabled=b;ia=$ga(ele,'a5-item');ia=ia.split(':').shift();var cn=this._getItemObj(ia).disabledClassName;if(cn!=''){if(b)$acn(ele,cn);else $rcn(ele,cn);}
 if(b){var indx=$u.a.find(this._s.id,ids[i]);if(indx!=-1){v.splice(indx,1);setVal=true;}}}
 if(setVal)this.setValue(v);}},getElement:function(v){var ids=this._valueToId(v);if(!ids)return false;var eles=[];for(var i=0;i<ids.length;i++)eles.push($(ids[i]));return eles;},setElementClass:function(v,c){var eles=this.getElement(v);$scn(eles,c);},addElementClass:function(v,c){var eles=this.getElement(v);$acn(eles,c);},removeElementClass:function(v,c){var eles=this.getElement(v);$rcn(eles,c);},navigate:function(d){if(this._i.ids.length==0)return false;var es=typeof arguments[1]!='undefined'?arguments[1]:true;d=d.toLowerCase();if(this.value.length==0){if(d[0]=='n')d='first';else if(d[0]=='p')d='last';}
 var selId=false;if(d[0]=='n'){var v=this._getNextId(this._s.id[0]);if(v)selId='#'+v;}else if(d[0]=='p'){var v=this._getPrevId(this._s.id[0]);if(v)selId='#'+v;}else if(d[0]=='f'){if(this._idSelectable(this._i.ids[0]))var v=this._i.ids[0];else var v=this._getNextId(this._i.ids[0]);if(v)selId='#'+v;}else if(d[0]=='l'){if(this._idSelectable(this._i.ids[this._i.ids.length-1]))var v=this._i.ids[this._i.ids.length-1];else var v=this._getPrevId(this._i.ids[this._i.ids.length-1]);if(v)selId='#'+v;}
@@ -2017,12 +2017,11 @@ this._o[id]={o:obj,s:settings};},get:function(id){if(typeof this._o[id]!='undefi
 return null;}}
 A5.Toolbar=Class.create();A5.Toolbar.prototype={initialize:function(contId,data,settings){this.contId=contId;$u.o.assign(this,{theme:'',override:'base',style:0,className:'',globalProperties:{}});if(typeof settings.theme!='undefined')A5.themes.assign(this,settings.theme,'toolbar');$u.o.assign(this,settings);A5.overrides.assign(this,'toolbar',this.override);this.data=data;this.render();},getControl:function(name){for(var i=0;i<this.data.length;i++){if(typeof this.data[i]=='object'){if(this.data[i].name==name)return this.data[i];}}
 return false;},render:function(){var cEle=$(this.contId);cEle.className=this.className;if(typeof this.style=='string')$ss(cEle,$gs(cEle)+this.style);for(var i=0;i<this.data.length;i++){if(typeof this.data[i].create!='undefined'){$u.o.assign(this.data[i],this.globalProperties,true);if(typeof this.data[i].createDefaults!='undefined')var ele=this.data[i].create(this.data[i].createDefaults);else var ele=this.data[i].create();cEle.appendChild(ele);}else if(this.data[i]=='-'){cEle.appendChild(document.createTextNode(' | '));}else if(typeof this.data[i]=='string'){var ele=document.createElement('span');ele.innerHTML=this.data[i];cEle.appendChild(ele);}}}}
-A5.HTMLEditor=Class.create();A5.HTMLEditor.prototype={initialize:function(ctrlId,settings){if(!$(ctrlId)||$ga(ctrlId,'A5ISHTMLEDITOR')=='true')return false;this.ctrlId=ctrlId;this._htmlEdId='A5HTMLEDITOR'+this._htmlEdIndx[0];this._htmlEdIndx[0]++;$u.o.assign(settings,{theme:'',override:'base',disabled:false,toolbar:{items:[],settings:{}},data:{className:[],font:[],format:[{value:'Normal',html:'<p style="margin: 0px;">Normal</p>',tag:'p'},{value:'Heading 1',html:'<h1 style="margin: 0px;">Heading 1</h1>',tag:'h1'},{value:'Heading 2',html:'<h2 style="margin: 0px;">Heading 2</h2>',tag:'h2'},{value:'Heading 3',html:'<h3 style="margin: 0px;">Heading 3</h3>',tag:'h3'},{value:'Heading 4',html:'<h4 style="margin: 0px;">Heading 4</h4>',tag:'h4'},{value:'Heading 5',html:'<h5 style="margin: 0px;">Heading 5</h5>',tag:'h5'},{value:'Heading 6',html:'<h6 style="margin: 0px;">Heading 6</h6>',tag:'h6'},{value:'Formatted',html:'<pre style="margin: 0px;">Formatted</pre>',tag:'pre'},{value:'Address',html:'<address style="margin: 0px;">Address</address>',tag:'address'}]},classNames:[],styleSheets:{css:'',linked:''},insert:{image:{allow:false,relativePath:'',styleName:'',titleText:'Insert Image',bodyText:'File:',editWatermarkText:'',editImage:'',data:''},file:{allow:false,relativePath:'',styleName:'',titleText:'Insert File',bodyText:'File:',editWatermarkText:'',editImage:'',data:''},window:{}},icons:{bold:'images/$$format.font.bold.png.a5image',italic:'images/$$format.font.italic.png.a5image',underline:'images/$$format.font.line.under.png.a5image',strike:'images/$$format.font.line.through.png.a5image',superScript:'images/$$format.text.superScript.png.a5image',subScript:'images/$$format.text.subScript.png.a5image',color:'images/$$format.font.color.png.a5image',highlightColor:'images/$$format.text.hilite.color.png.a5image',backgroundColor:'images/$$format.background.color.png.a5image',justifyLeft:'images/$$format.justify.left.png.a5image',justifyCenter:'images/$$format.justify.center.png.a5image',justifyRight:'images/$$format.justify.right.png.a5image',justify:'images/$$format.justify.justified.png.a5image',outdent:'images/$$format.indent.out.png.a5image',indent:'images/$$format.indent.png.a5image',bulletedList:'images/$$format.list.bulleted.png.a5image',numberedList:'images/$$format.list.numbered.png.a5image',insertTable:'images/$$layout.table.png.a5image',insertLink:'images/$$control.html.link.png.a5image',insertImage:'images/$$control.image.png.a5image',insertFile:'images/$$file.open.png.a5image',insertSymbol:'images/$$generic.pilcrow.png.a5image',clearFormat:'images/$$edit.clear.png.a5image',toggleCodeView:'images/$$code.xml.tag.png.a5image',tableInsertRowBefore:'images/$$layout.table.row.insert.before.png.a5image',tableInsertRowAfter:'images/$$layout.table.row.insert.after.png.a5image',tableInsertColumnBefore:'images/$$layout.table.col.insert.before.png.a5image',tableInsertColumnAfter:'images/$$layout.table.col.insert.after.png.a5image',tableDeleteRow:'images/$$layout.table.row.remove.png.a5image',tableDeleteColumn:'images/$$layout.table.col.remove.png.a5image'},onRightClick:0,onFocus:0,onBlur:0,onStateChange:0,onChange:0},true);$u.o.assign(settings.insert.window,{theme:settings.theme,baseCtrlId:this.ctrlId,title:{html:'Insert',tools:{items:[]}},header:{show:false},body:{content:{type:'url',url:'about:blank'}},footer:{show:false},type:'modal',resize:'both',autoShow:false,autoPosition:true});$u.o.assign(this,settings);A5.overrides.assign(this,'htmlEditor',this.override);this._iWindow=new A5.Window(this.insert.window);$e.add(this._iWindow.getWindowId(),'a5insert',function(e,classInst){classInst._iWindow.hide();var insertType=$ga(this,'a5inserttype');if(insertType=='image'){var imageToInsert=$ga(this,'a5imagetoinsert');classInst.command('insertimage',imageToInsert);}else if(insertType=='file'){var fileToInsert=$ga(this,'a5filetoinsert');var fileToInsertShort=fileToInsert.split('/').pop();classInst._edInsertHTML('a',fileToInsertShort,{href:fileToInsert,target:'_blank'});}},this);this._iWindow.addTool(this._iWindow._defaultTools['close']);if(this.styleSheets.css.constructor==Array)this.styleSheets.css.join('\n');else if(this.styleSheets.css.constructor!=String)this.styleSheets.css='';this.styleSheets.css='table, td {border: 1px dashed #aaa;}'+this.styleSheets.css;A5.commandHandler.create(this._htmlEdId,this,{onAction:function(action){action=action.split(':');var aName=action[0];if(aName=='format'){var fArr=[];var fResArr=[];for(var i=0;i<this.data.format.length;i++){fArr.push(this.data.format[i].value);fResArr.push(this.data.format[i].tag);}
+A5.HTMLEditor=Class.create();A5.HTMLEditor.prototype={initialize:function(ctrlId,settings){if(!$(ctrlId)||$ga(ctrlId,'A5ISHTMLEDITOR')=='true')return false;this.ctrlId=ctrlId;this._htmlEdId='A5HTMLEDITOR'+this._htmlEdIndx[0];this._htmlEdIndx[0]++;$u.o.assign(settings,{theme:'',override:'base',toolbar:{items:[],settings:{}},data:{className:[],font:[],format:[{value:'Normal',html:'<p style="margin: 0px;">Normal</p>',tag:'p'},{value:'Heading 1',html:'<h1 style="margin: 0px;">Heading 1</h1>',tag:'h1'},{value:'Heading 2',html:'<h2 style="margin: 0px;">Heading 2</h2>',tag:'h2'},{value:'Heading 3',html:'<h3 style="margin: 0px;">Heading 3</h3>',tag:'h3'},{value:'Heading 4',html:'<h4 style="margin: 0px;">Heading 4</h4>',tag:'h4'},{value:'Heading 5',html:'<h5 style="margin: 0px;">Heading 5</h5>',tag:'h5'},{value:'Heading 6',html:'<h6 style="margin: 0px;">Heading 6</h6>',tag:'h6'},{value:'Formatted',html:'<pre style="margin: 0px;">Formatted</pre>',tag:'pre'},{value:'Address',html:'<address style="margin: 0px;">Address</address>',tag:'address'}]},classNames:[],styleSheets:{css:'',linked:''},insert:{image:{allow:false,relativePath:'',styleName:'',titleText:'Insert Image',bodyText:'File:',editWatermarkText:'',editImage:'',data:''},file:{allow:false,relativePath:'',styleName:'',titleText:'Insert File',bodyText:'File:',editWatermarkText:'',editImage:'',data:''},window:{}},icons:{bold:'images/$$format.font.bold.png.a5image',italic:'images/$$format.font.italic.png.a5image',underline:'images/$$format.font.line.under.png.a5image',strike:'images/$$format.font.line.through.png.a5image',superScript:'images/$$format.text.superScript.png.a5image',subScript:'images/$$format.text.subScript.png.a5image',color:'images/$$format.font.color.png.a5image',highlightColor:'images/$$format.text.hilite.color.png.a5image',backgroundColor:'images/$$format.background.color.png.a5image',justifyLeft:'images/$$format.justify.left.png.a5image',justifyCenter:'images/$$format.justify.center.png.a5image',justifyRight:'images/$$format.justify.right.png.a5image',justify:'images/$$format.justify.justified.png.a5image',outdent:'images/$$format.indent.out.png.a5image',indent:'images/$$format.indent.png.a5image',bulletedList:'images/$$format.list.bulleted.png.a5image',numberedList:'images/$$format.list.numbered.png.a5image',insertTable:'images/$$layout.table.png.a5image',insertLink:'images/$$control.html.link.png.a5image',insertImage:'images/$$control.image.png.a5image',insertFile:'images/$$file.open.png.a5image',insertSymbol:'images/$$generic.pilcrow.png.a5image',clearFormat:'images/$$edit.clear.png.a5image',toggleCodeView:'images/$$code.xml.tag.png.a5image',tableInsertRowBefore:'images/$$layout.table.row.insert.before.png.a5image',tableInsertRowAfter:'images/$$layout.table.row.insert.after.png.a5image',tableInsertColumnBefore:'images/$$layout.table.col.insert.before.png.a5image',tableInsertColumnAfter:'images/$$layout.table.col.insert.after.png.a5image',tableDeleteRow:'images/$$layout.table.row.remove.png.a5image',tableDeleteColumn:'images/$$layout.table.col.remove.png.a5image'},onRightClick:0,onFocus:0,onBlur:0,onStateChange:0,onChange:0},true);$u.o.assign(settings.insert.window,{theme:settings.theme,baseCtrlId:this.ctrlId,title:{html:'Insert',tools:{items:[]}},header:{show:false},body:{content:{type:'url',url:'about:blank'}},footer:{show:false},type:'modal',resize:'both',autoShow:false,autoPosition:true});$u.o.assign(this,settings);A5.overrides.assign(this,'htmlEditor',this.override);this._iWindow=new A5.Window(this.insert.window);$e.add(this._iWindow.getWindowId(),'a5insert',function(e,classInst){classInst._iWindow.hide();var insertType=$ga(this,'a5inserttype');if(insertType=='image'){var imageToInsert=$ga(this,'a5imagetoinsert');classInst.command('insertimage',imageToInsert);}else if(insertType=='file'){var fileToInsert=$ga(this,'a5filetoinsert');var fileToInsertShort=fileToInsert.split('/').pop();classInst._edInsertHTML('a',fileToInsertShort,{href:fileToInsert,target:'_blank'});}},this);this._iWindow.addTool(this._iWindow._defaultTools['close']);if(this.styleSheets.css.constructor==Array)this.styleSheets.css.join('\n');else if(this.styleSheets.css.constructor!=String)this.styleSheets.css='';this.styleSheets.css='table, td {border: 1px dashed #aaa;}'+this.styleSheets.css;A5.commandHandler.create(this._htmlEdId,this,{onAction:function(action){action=action.split(':');var aName=action[0];if(aName=='format'){var fArr=[];var fResArr=[];for(var i=0;i<this.data.format.length;i++){fArr.push(this.data.format[i].value);fResArr.push(this.data.format[i].tag);}
 var fVal=$u.a.find(fArr,action[1]);if(fVal>-1){fVal=fResArr[fVal];this.command('formatblock','<'+fVal+'>');}}else if(aName=='fontName')this.command('fontName',action[1]);else if(aName=='fontSize')this.command('fontSize',action[1]);else if(aName=='getColor')this._colorMenu(action[1]);else if(aName=='getSymbol')this._symbolMenu();else if(aName=='setColor'){var aColor=action[2];if(aColor=='no-color')aColor='';if(action[1]=='fontColor')this.command('foreColor',aColor);else if(action[1]=='highlightColor')this.command('hilitecolor',aColor);else if(action[1]=='backgroundColor')this.command('backColor',aColor);}else if(aName=='tableMenu')this._tblMenu();else if(aName=='toggleDesignMode')this.toggleDesignMode();else if(aName=='hideMenus'){if(this._tMenu)this._tMenu.hide();if(this._cMenu)this._cMenu.hide();if(this._sMenu)this._sMenu.hide();var ctrlObj=this._tbObj.getControl('fontName');if(ctrlObj)ctrlObj._listbox._window.hide();ctrlObj=this._tbObj.getControl('fontSize');if(ctrlObj)ctrlObj._listbox._window.hide();ctrlObj=this._tbObj.getControl('format');if(ctrlObj)ctrlObj._listbox._window.hide();ctrlObj=this._tbObj.getControl('className');if(ctrlObj)ctrlObj._listbox._window.hide();}else if(aName=='insertHTML')this._edInsertHTML('',action[1]);else if(aName=='clearButtonState'){var ctrlObj=this._tbObj.getControl(action[1]);if(ctrlObj)ctrlObj.setState($(ctrlObj._buttonIds[0]),false);}else if(aName=='insert'){if(action[1]=='link'){var url=prompt('Link URL','');if(url!=null)this._edInsertHTML('a',url,{href:url});}else{if(action[1]=='image'){this._iWindow.setTitle(this.insert.image.titleText);this._iWindow.body.content.url='__a5FileUploadMasterPage.a5w?fileUploadUrl=__a5HTMLEditorFileInsertPage.a5w&fileUploadAutoUpload=true&fileUploadText='+this.insert.image.bodyText+'&fileSelectImg='+this.insert.image.editImage+'&fileBoxWaterMark='+this.insert.image.editWatermarkText+'&stylesheetName='+this.insert.image.styleName+'&insertType=image&relativePath='+this.insert.image.relativePath+'&windowID='+this._iWindow.getWindowId();if(this.insert.image.data!='')this._iWindow.body.content.url=this._iWindow.body.content.url+'&'+this.insert.image.data;}else{this._iWindow.setTitle(this.insert.file.titleText);this._iWindow.body.content.url='__a5FileUploadMasterPage.a5w?fileUploadUrl=__a5HTMLEditorFileInsertPage.a5w&fileUploadAutoUpload=true&fileUploadText='+this.insert.file.bodyText+'&fileSelectImg='+this.insert.file.editImage+'&fileBoxWaterMark='+this.insert.file.editWatermarkText+'&stylesheetName='+this.insert.file.styleName+'&insertType=file&relativePath='+this.insert.file.relativePath+'&windowID='+this._iWindow.getWindowId();if(this.insert.file.data!='')this._iWindow.body.content.url=this._iWindow.body.content.url+'&'+this.insert.file.data;}
 this._iWindow.refresh();this._iWindow.show();}}else if(aName=='command'&&action.length==3)this.command(action[1],action[2]);else if(aName=='command')this.command(action[1]);}});var tEle=$(ctrlId);$sa(tEle,'A5ISHTMLEDITOR','true');var iEle=document.createElement('iframe');iEle.id=ctrlId+'.HTMLEDITOR';if(tEle.style.width!='')iEle.style.width=tEle.style.width;else iEle.style.width=tEle.offsetWidth+'px';if(tEle.style.height!='')iEle.style.height=tEle.style.height;else iEle.style.height=tEle.offsetHeight+'px';iEle.style.overflow='auto';iEle.frameBorder='0';iEle.border='0';iEle.className=tEle.className;tEle.parentNode.insertBefore(iEle,tEle);tEle.style.display='none';this._iEle=iEle;this._tEle=tEle;if(document.all&&navigator.appName!='Opera'){this._iEle.contentWindow.document.designMode='on';this._eDoc=this._iEle.contentWindow.document;$e.add(this._iEle.contentWindow,'focus',this._edFocus,this,true);$e.add(this._iEle.contentWindow,'blur',this._edBlur,this,true);$e.add(this._iEle.contentWindow,'contextmenu',this._edRClick,this,true);this.focus();this._isIE=true;}else{this._iEle.contentDocument.designMode='on';this._iEle.style.lineHeight='0';this._eDoc=this._iEle.contentDocument;$e.add(this._eDoc,'focus',this._edFocus,this,true);$e.add(this._eDoc,'blur',this._edBlur,this,true);$e.add(this._eDoc,'contextmenu',this._edRClick,this,true);this._isIE=false;}
 this._eDoc.open();var initHTML=tEle.value;if(initHTML=='')initHTML='';this._eDoc.write('<head>'+$if(this.styleSheets.linked!='','<link rel="stylesheet" type="text/css" href="'+this.styleSheets.linked+'" />','')+$if(this.styleSheets.css!='','<style type="text/css">'+this.styleSheets.css+'</style>','')+'</head><body>'+initHTML+'</body>');this._eDoc.close();$e.add(this._eDoc,'keyup',this._edGetState,this,true);$e.add(this._eDoc,'keydown',this._edKeyDown,this,true);$e.add(this._eDoc,'mouseup',this._edGetState,this,true);$e.add(this._eDoc,'paste',function(e,ci){setTimeout(function(){ci._edGetState(e);delete ci;},0);},this);this.state={bold:false,underline:false,italic:false,strikeThrough:false,justifyLeft:true,justifyCenter:false,justifyRight:false,justifyFull:false,fontName:'',fontSize:'',unorderedList:false,orderedList:false,className:'',format:'',canUndo:false,canRedo:false}
-if(this.onStateChange.constructor==Function)this.onStateChange();this._edBlurTO=0;this._kw=new AUI.KeyWatcher([{key:'ctrl+b',handle:Function('A5.commandHandler.action(\''+this._htmlEdId+'\',\'command:bold\'); return true;')},{key:'ctrl+i',handle:Function('A5.commandHandler.action(\''+this._htmlEdId+'\',\'command:italic\'); return true;')},{key:'ctrl+u',handle:Function('A5.commandHandler.action(\''+this._htmlEdId+'\',\'command:underline\'); return true;')}],this,this._iEle.contentWindow);this._edSelBookmark='';this._edSelRange='';var classInst=this;setTimeout(function(){classInst._calcToolbar();classInst._edGetClassNames();delete classInst;},1);},setDisabled:function(v){if(typeof v=='boolean'&&this.disabled!=v){this.disabled=v;if(v){this._eDoc.designMode='off';this._tEle.disabled=true;}else{this._eDoc.designMode='on';this._tEle.disabled=false;}
-var tbc=null;for(var i=0;i<this._tbObj.data.length;i++){tbc=this._tbObj.data[i];if(tbc!=null&&typeof tbc=='object'&&typeof tbc.setDisabled=='function')tbc.setDisabled(v);}}},command:function(type){if(this._iEle.style.display=='none'||this._eDoc.designMode=='off')return false;this._iEle.contentWindow.focus();var data=typeof(arguments[1]!='undefined')?arguments[1]:null;var lType=type.toLowerCase();if(this._isIE&&this._edSelBookmark!=''){var range=this._eDoc.body.createTextRange();range.moveToBookmark(this._edSelBookmark);range.select();}
+if(this.onStateChange.constructor==Function)this.onStateChange();this._edBlurTO=0;this._kw=new AUI.KeyWatcher([{key:'ctrl+b',handle:Function('A5.commandHandler.action(\''+this._htmlEdId+'\',\'command:bold\'); return true;')},{key:'ctrl+i',handle:Function('A5.commandHandler.action(\''+this._htmlEdId+'\',\'command:italic\'); return true;')},{key:'ctrl+u',handle:Function('A5.commandHandler.action(\''+this._htmlEdId+'\',\'command:underline\'); return true;')}],this,this._iEle.contentWindow);this._edSelBookmark='';this._edSelRange='';var classInst=this;setTimeout(function(){classInst._calcToolbar();classInst._edGetClassNames();delete classInst;},1);},command:function(type){if(this._iEle.style.display=='none')return false;this._iEle.contentWindow.focus();var data=typeof(arguments[1]!='undefined')?arguments[1]:null;var lType=type.toLowerCase();if(this._isIE&&this._edSelBookmark!=''){var range=this._eDoc.body.createTextRange();range.moveToBookmark(this._edSelBookmark);range.select();}
 if(this._edSelRange!=''){var selection=this._iEle.contentWindow.getSelection();selection.addRange(this._edSelRange);}
 if(lType=='backcolor'){var ele=this._edGetSelElement();if(!ele.tagName)return false;var tagName=ele.tagName.toLowerCase();var validTags=['p','pre','div','td','th','li','h1','h2','h3','h4','h5','h6','blockquote','dd','dt','legend','fieldset','caption','body'];if($u.a.find(validTags,tagName)==-1){while($u.a.find(validTags,tagName)==-1){ele=ele.parentNode;if(ele.tagName)tagName=ele.tagName.toLowerCase();}}
 if($u.a.find(validTags,tagName)==-1)return false;if(ele.tagName.toLowerCase()!='body')ele.style.backgroundColor=data;}else if(lType=='hilitecolor'){if(!navigator.userAgent.toLowerCase().match('firefox')&&!navigator.userAgent.toLowerCase().match('opera'))type='backcolor';if(this._eDoc.queryCommandEnabled(type))this._eDoc.execCommand(type,false,data);}else if(lType=='insertdate'){var dt=new Date()
@@ -2349,7 +2348,7 @@ if(typeof this.onChange=='function')this.onChange();},mEnter:function(e,ci){if(c
 this.state={zoom:{value:1,scale:1},center:{relative:{x:.5,y:.5},absolute:{x:0,y:0}},size:{relative:{width:1,height:1},absolute:{width:0,height:0},base:{width:0,height:0}}}
 A5.u.pointerTracker.add(ele,{state:this.state,zs:this.zoom,s:this._.s,onStart:function(d,s,e){var te=e.target;d.skip=false;if(this.contains&&this.children[1].contains(te))d.skip=true;if(!d.skip){d.baseScale=s.s.z;s.s.nz=s.s.z;d.baseX=s.state.center.absolute.x;d.baseY=s.state.center.absolute.y;d.curScale=s.s.z;d.curX=d.baseX;d.curY=d.baseY;d.bEle=this.firstChild;d.ele=d.bEle.firstChild;d.ele.style.transition='';d.bEle.style.transition='';}},onChange:function(d,s,e){if(!d.skip){var scaled=false;if(d.type=='double'){d.curScale=d.baseScale+d.scale.value-1;d.curScale=Math.min(s.zs.max,Math.max(s.zs.min,d.curScale));scaled=true;}else if(e.ctrlKey){if(e.altKey)d.curScale-=.05;else d.curScale+=.05;d.curScale=Math.min(s.zs.max,Math.max(s.zs.min,d.curScale));scaled=true;}
 if(scaled){d.ele.style.transform='scale('+d.curScale+')';d.bEle.style.width=Math.floor(s.s.w*d.curScale)+'px';d.bEle.style.height=Math.floor(s.s.h*d.curScale)+'px';}
-d.curX=((d.baseX/d.baseScale*d.curScale)+d.delta.x);d.curY=((d.baseY/d.baseScale*d.curScale)+d.delta.y);d.bEle.style.transform='translate('+d.curX+'px,'+d.curY+'px)';}},onEnd:function(d,s,e){if(!d.skip){s.state.center.absolute.x=d.curX;s.state.center.absolute.y=d.curY;s.s.nz=d.curScale;$e.execute(d.ele,'a5-end-pt');}}});var egName='VIEWER.'+this.contId;$e.add(this._.ce,'a5-end-pt',this._.endPT,this,true,egName);$e.add(this._.ce,'a5-loaded',this._.load,this,true,egName);$e.add(this._.e,'mouseenter',this._.mEnter,this,false,egName);$e.add(this._.e,'mousemove',this._.mMove,this,false,egName);$e.add(this._.e,'mouseleave',this._.mLeave,this,false,egName);$e.add(ele,'wheel',function(e){var skip=false;if(this.auto.allow&&this._.eb)skip=true;if(!skip){if(e.deltaY>0)this.setZoom(this._.s.z/1.2,{x:e.clientX,y:e.clientY},false);else if(e.deltaY<0)this.setZoom(this._.s.z*1.2,{x:e.clientX,y:e.clientY},false);}},this,true,egName);$e.add(ele,'abstractdbltap',function(e,ci){var skip=false;var te=e.target;if(this.contains&&this.children[1].contains(te))skip=true;if(ci.auto.allow&&ci._.eb)skip=true;if(!skip)ci.setZoom('contain');},this,false,egName);},destroy:function(){A5.u.pointerTracker.remove(ele);$e.removeGroup('VIEWER.'+this.contId);},setContent:function(t,c){var res=true;if(typeof this.onBeforeLoad=='function')res=this.onBeforeLoad();if(res===false)return false;this._.loaded=false;var ce=this._.ce;var cbe=this._.cbe;cbe.style.width='';cbe.style.height='';ce.style.transform='';if(t=='image'){var img=new Image();img.onload=function(){var w=this.naturalWidth;var h=this.naturalHeight;ce.innerHTML='<img src="'+this.src+'" style="width: '+w+'px; height: '+h+'px;" />';$e.execute(ce,'a5-loaded');delete ce;}
+d.curX=((d.baseX/d.baseScale*d.curScale)+d.delta.x);d.curY=((d.baseY/d.baseScale*d.curScale)+d.delta.y);d.bEle.style.transform='translate('+d.curX+'px,'+d.curY+'px)';}},onEnd:function(d,s,e){if(!d.skip){s.state.center.absolute.x=d.curX;s.state.center.absolute.y=d.curY;s.s.nz=d.curScale;$e.execute(d.ele,'a5-end-pt');}}});$e.add(this._.ce,'a5-end-pt',this._.endPT,this,true);$e.add(this._.ce,'a5-loaded',this._.load,this,true);$e.add(this._.e,'mouseenter',this._.mEnter,this);$e.add(this._.e,'mousemove',this._.mMove,this);$e.add(this._.e,'mouseleave',this._.mLeave,this);$e.add(ele,'wheel',function(e){var skip=false;if(this.auto.allow&&this._.eb)skip=true;if(!skip){if(e.deltaY>0)this.setZoom(this._.s.z/1.2,{x:e.clientX,y:e.clientY},false);else if(e.deltaY<0)this.setZoom(this._.s.z*1.2,{x:e.clientX,y:e.clientY},false);}},this,true);$e.add(ele,'abstractdbltap',function(e,ci){var skip=false;var te=e.target;if(this.contains&&this.children[1].contains(te))skip=true;if(ci.auto.allow&&ci._.eb)skip=true;if(!skip)ci.setZoom('contain');},this);},setContent:function(t,c){var res=true;if(typeof this.onBeforeLoad=='function')res=this.onBeforeLoad();if(res===false)return false;this._.loaded=false;var ce=this._.ce;var cbe=this._.cbe;cbe.style.width='';cbe.style.height='';ce.style.transform='';if(t=='image'){var img=new Image();img.onload=function(){var w=this.naturalWidth;var h=this.naturalHeight;ce.innerHTML='<img src="'+this.src+'" style="width: '+w+'px; height: '+h+'px;" />';$e.execute(ce,'a5-loaded');delete ce;}
 img.src=c;}else if(t!='loading'){ce.innerHTML=c;this._.load.call(this);}
 if(!this._.loaded){cbe.style.display='none';this._.le.innerHTML=this.loading.html;this._.le.style.display='';}},refresh:function(){var anim=typeof arguments[0]!='undefined'?arguments[0]:false;if(this.overlay.show&&this._.oe.style.display=='none')this._.oe.style.display='';else if(!this.overlay.show&&this._.oe.style.display!='none')this._.oe.style.display='none';if(this.content.overlay.show&&this._.coe.style.display=='none')this._.coe.style.display='';else if(!this.content.overlay.show&&this._.coe.style.display!='none')this._.coe.style.display='none';this._.zoom.call(this);this._.center.call(this,anim);},setZoom:function(z){var p=typeof arguments[1]=='object'&&arguments[1]!=null?arguments[1]:false;var anim=typeof arguments[2]=='object'&&arguments[2]!=null?arguments[2]:true;var sc=this.state.center;if(typeof z=='number'){z=Math.min(this.zoom.max,Math.max(this.zoom.min,z));if(z==this._.s.z)return false;if(p){var b=this._.e.getBoundingClientRect();var x=typeof p.x=='number'?p.x-b.x-document.body.scrollLeft:null;var y=typeof p.y=='number'?p.y-b.y-document.body.scrollTop:null;if(x!=null||y!=null){var zd=(z-this._.s.z);var cx=b.width/2;var cy=b.height/2;if(x!=null)sc.absolute.x+=((cx-x)*zd)/z;if(y!=null)sc.absolute.y+=((cy-y)*zd)/z;this._.absToRel.call(this);}}}else if(typeof z=='string'){if(z=='in'||z=='out'){if(z=='out')z=this._.s.z/1.5;else z=this._.s.z*1.5;}else{if(z!='cover')z='contain';sc.relative.x=.5;sc.relative.y=.5;}}else return false;this.state.zoom.value=z;this.refresh(anim);return true;},setCenter:function(x,y){if(x=='center'){x=.5;y=.5;}
 var sc=this.state.center;if(typeof x=='number')sc.relative.x=Math.min(1,Math.max(0,x));if(typeof y=='number')sc.relative.y=Math.min(1,Math.max(0,y));this.refresh();},setMask:function(ele){ele=$(ele);if(ele){if(ele.id=='')ele.id=A5.u.getUniqueId();if(ele.style.position!='absolute')ele.style.position='relative';var mId=ele.id+'.MASK';var mEle=$(mId);if(!mEle){mEle=document.createElement('div');mEle.id=mId;var ms=this.mask;mEle.className=ms.className;A5.u.element.style(mEle,'display: grid; grid-template-columns: 1fr 1fr 1fr; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: hidden;');var moHTML='<div class="'+ms.out.className+'" style="'+ms.out.style+'"></div>';var miHTML='<div class="'+ms.in.className+'" style="'+ms.in.style+'"></div>';mEle.innerHTML=moHTML+moHTML+moHTML+'\n'+moHTML+miHTML+moHTML+'\n'+moHTML+moHTML+moHTML;ele.appendChild(mEle);}
@@ -2427,7 +2426,7 @@ if(tag){tag=tag.toLowerCase();if(tag=='input'||tag=='textarea')return null;}}
 $e.stopEvent($e.getEvent(e));return false;}}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -2658,7 +2657,7 @@ else if(month_type==3||month_type==6){cur_chr_month=cur_chr_month.toUpperCase()}
 return cur_chr_month}
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
@@ -12637,7 +12636,7 @@ A5.DialogComponentHelper.prototype = {
 		if(typeof onerror != 'function') onerror = function() { };
 		localforage.getItem(itemName).then(data=>onsuccess.call(this,data)).catch(err=>onerror.call(this,err));
 	},
-	idbDeleteItemPromise: function(itemName) { return localforage.removeItem(itemName)},
+	idbDeleteItemPromise: function(itemName) { return localforage.remoteItem(itemName)},
 	idbDeleteItem: function(itemName,onsuccess,onerror) {
 		if(typeof onsuccess != 'function') onsuccess = function() { };
 		if(typeof onerror != 'function') onerror = function() { };
@@ -12661,55 +12660,7 @@ A5.DialogComponentHelper.prototype = {
 
 	idbClear: function(onsuccess) { localforage.clear(onsuccess)},
 
-	idbRename: function(key,newKey) {
-		var ok = function(data) {
-			var	ok2 = function() { this.idbDeleteItem(key)};
-			var error2 = function() { alert('error');};
-			this.idbSetItem(newKey,data,ok2,error2)
-		}
-		var fail = function() { alert('error');};
-		this.idbGetItem(key,ok,fail)
-	},
 
-
-	idbGetItemsIntoArray: function(keyPrefix,onOk,onError) {
-		//read all of the keys that start with the keyPrefix into an array
-		if(typeof onError != 'function') {
-			var error = function() { alert('error');}
-		}
-		var onOkForGetKeys = function(data){
-			if(keyPrefix != '*') {
-				var d = [];
-				for(var i = 0; i < data.length; i++) {
-					if(data[i].indexOf(keyPrefix) > -1) d.push(data[i])
-				}
-				data = d
-			}
-			var countKeysToRead = data.length;
-			var arr = [];
-			if(data.length == 0) {
-				if(typeof onOk == 'function') onOk.call(this,arr)
-			}
-			for(var i = 0; i < data.length; i++) {
-				key = data[i];
-				var countWorkDone = 0;
-				var getGotData = function(key) {
-					 var f = function(data) {
-						arr.push({key: key, data: data});
-					 	countWorkDone++;
-					 	if(countWorkDone == countKeysToRead) {
-					 		if(typeof onOk == 'function') onOk.call(this,arr)
-
-					 	}
-					 }
-					 return f;
-				}
-				var gotData = getGotData(key);
-				this.idbGetItem(key,gotData)
-			}
-		}
-		this.idbGetKeys(onOkForGetKeys,error);
-	},
 
 
 	storeComponentStyle: function(styleName,url) {
@@ -13626,72 +13577,6 @@ A5.DialogComponentHelper.prototype = {
 
 		}
 		lObj.refresh();
-	},
-
-
-	progressBarShow : function(id,width,height,pct,barcolor,msg) {
-		if(typeof pct == 'undefined') pct = '0';
-		pct = '' + pct;
-		if(typeof barcolor == 'undefined') barcolor = '#cdcdcd';
-		if(typeof msg == 'undefined') msg = '';
-		if(typeof height == 'undefined' || height == '') height = '5px';
-		pct = pct.split('%')[0] + '%';
-		var html = '<div style="display:flex;"><div style="width:'+width+';height:'+height+';border-radius: 10px; border: solid 1px gray; padding: 3px;"><div id="'+id+'.PROGRESS" style="background-color:'+barcolor+'; width: '+pct+';height: 100%"></div></div><div id="'+id+'.MESSAGE" style="margin-left: 10px"></div><div id="'+id+'.CLOSEBUTTON" style="display:none; cursor: pointer;padding-left: 5px; padding-right: 5px;" onclick="ele = $(\''+id+'\').parentElement; ele.style.display = \'none\'; ;">X</div></div>'
-		if(id.toLowerCase().indexOf('element') >-1) {
-			id = id.split(':')[1];
-			var ele = $(id)
-		} else {
-			var ele = this.getPointer(id);
-		}
-		ele.parentElement.style.display = '';
-		ele.style.display = '';
-		ele.innerHTML = html
-		if(msg != '') {
-			var ele3 = $(id + '.MESSAGE');
-			ele3.innerHTML = msg;
-		}
-		if(typeof this._progress == 'undefined') this._progress = {};
-		var obj = this._progress;
-		id = id.toUpperCase()
-		if(typeof obj[id] == 'undefined') obj[id] = {};
-		obj[id].width = width
-		obj[id].height = height;
-		obj[id].barcolor = barcolor;
-		obj[id].pct = pct
-		obj[id].ele = ele;
-	},
-	progressBarSetProgress : function(id,pct) {
-		var obj = this._progress;
-		if(typeof obj == 'undefined') { alert('progress bar has not been instantiated'); return;}
-		if(id.toLowerCase().indexOf('element') >-1) {
-			id = id.split(':')[1];
-		}
-		var obj2 = obj[id.toUpperCase()];
-		if(typeof obj2 == 'undefined') { alert('progress bar has not been instantiated'); return;}
-		this.progressBarShow(id,obj2.width,obj2.height,pct,obj2.barcolor);
-	},
-
-	progressBarSetMessage : function(id,msg) {
-		var obj = this._progress;
-		if(typeof obj == 'undefined') { alert('progress bar has not been instantiated'); return;}
-		if(id.toLowerCase().indexOf('element') >-1) {
-			id = id.split(':')[1];
-		}
-		var obj2 = obj[id.toUpperCase()];
-		if(typeof obj2 == 'undefined') { alert('progress bar has not been instantiated'); return;}
-		this.progressBarShow(id,obj2.width,obj2.height,obj2.pct,obj2.barcolor,msg);
-
-	},
-
-
-	progressBarHide: function(id) {
-		if(id.toLowerCase().indexOf('element') >-1) {
-			id = id.split(':')[1];
-			var ele = $(id)
-		} else {
-			var ele = this.getPointer(id);
-		}
-		ele.style.display = 'none';
 	},
 
 
@@ -14920,7 +14805,7 @@ _listRowSelect: function(listId,lObj) {
 		}
 	},
 
-_persistToLocalStorageLow: function(key,_dJSON,_mode) {
+_persistToLocalStorageLow: function(key,_dJSON) {
 
 		var flagWP = this._embeddedMode;
 		var ls = this._localStorageSettings;
@@ -14960,15 +14845,7 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 				var _compressed = A5.deflate(_dJSON);
 				_dJSON = 'compressed:' + _compressed;
 			}
-
-//alert('JUST BEFORE PERSIST TO LOCAL STORAGE');
-//var oo = JSON.parse(_dJSON)
-//alert(oo.userData);
 			localStorage.setItem(key,_dJSON);
-
-//var _txt = localStorage.getItem(key)
-//var oo2 = JSON.parse(_txt)
-//alert(oo2.userData);
 
 			var listName = key.split('.');
 			//derive the list name from the key.
@@ -14976,7 +14853,6 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 			if(listName != '' && listName != 'undefined') {
 				var lObj = this.getControl(listName);
 				obj.success = true;
-				obj.mode = _mode
 				if(lObj) lObj._executeEvent('onPersistToLocalStorage',obj);
 			}
 		}
@@ -14988,7 +14864,6 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 			if(listName != 'VARIABLES') {
 				var lObj = this.getControl(listName);
 				obj.success = false;
-				obj.mode = _mode
 				if(lObj) lObj._executeEvent('onPersistToLocalStorage',obj);
 			}
 			return false;
@@ -15008,7 +14883,6 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 		if(flag) {
 			localStorage.setItem(infoKey,infoData)
 		}
-
 
 		delete _d2;
 		return flag;
@@ -15156,7 +15030,16 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 
 		this._executeEvent('onRestoreVariablesFromLocalStorage',o2);
 		this._restoringVariables = false;
+
+
+
+
 	},
+
+
+
+
+
 	__listPersistMode: function(listId) {
 		var _wh = this.__persistWhere(listId);
 		if(_wh == 'fs') return 'edits';
@@ -15180,83 +15063,71 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 	},
 
 	__dumpListStorage: function(listId,fileName,flagSilent,divId,append) {
-			var flagS3 = false;
-			if(typeof fileName == Object) {
-				var flagS3 = true;
-			};
-			var append = false;
-			if(typeof arguments[4] != 'undefined') append = arguments[4];
-			var _mode = this.__listPersistMode(listId);
-			var _wh = this.__persistWhere(listId);
-			if(_mode == 'full' && _wh == 'ls') {
-				alert('Method only available if List set to persist Edits');
-				return false;
-			};
-
-			if(_wh == 'idb') {
-				var ls = this._localStorageSettings;
-				var keyLIST = ls.namespace + '.' + 'LIST' + '.' + listId.toUpperCase();
-				var that = this;
-				var ok = function(data) {
-					if(!flagS3) that.debugInfoToFile(data,fileName,false,flagSilent) ;
-					if(flagS3) that.debugInfoToS3(data,obj.connectionString,obj.objectName,append,flagSilent) ;
-				};
-				var error = function(err) { alert('data was not retrieved')};
-				this.idbGetItem(keyLIST,ok,error);
-				return;
-			}
+		var flagS3 = false;
+		if(typeof fileName == Object) {
+			var flagS3 = true;
+		};
+		var append = false;
+		if(typeof arguments[4] != 'undefined') append = arguments[4];
+		var _mode = this.__listPersistMode(listId);
+		var _wh = this.__persistWhere(listId);
+		if(_mode == 'full' && _wh == 'ls') {
+			alert('Method only available if List set to persist Edits');
+			return false;
+		};
 
 
-			var ls = this._localStorageSettings;
-			var keyLIST = ls.namespace + '.' + 'LIST' + '.' + listId.toUpperCase();
-			var keyLISTEDITS = ls.namespace + '.' + 'LISTEDITS' + '.' + listId.toUpperCase();
-			var keyLISTSYNCEDEDITS = ls.namespace + '.' + 'LISTSYNCEDEDITS' + '.' + listId.toUpperCase();
-			var keyLISTSYNCEDDELETES = ls.namespace + '.' + 'LISTSYNCEDDELETES' + '.' + listId.toUpperCase();
-			var _wh = this.__persistWhere(listId);
-			if(_wh == 'ls') {
-				var obj = localStorage;
-				var data = obj[keyLISTEDITS];
-				if(data == null) data = '';
-				var count1 = (data.match(/"data":/g) || []).length;
-				var msg = '';
-				msg = msg + '<br><br><b>base List ('+keyLIST+'):</b><br>' + obj[keyLIST];
-				msg = msg + '<br><br><b>edits ('+keyLISTEDITS+') -(count : '+count1+'): </b><br>' + obj[keyLISTEDITS];
-				msg = msg + '<br><br><b>synced edits ('+keyLISTSYNCEDEDITS+'):</b><br>' + obj[keyLISTSYNCEDEDITS];
-				msg = msg + '<br><br><b>synced deletes ('+keyLISTSYNCEDDELETES+'):</b><br>' + obj[keyLISTSYNCEDDELETES];
-				var msg2 = '';
-				msg2 = msg2 + '\n\nbase List ('+keyLIST+'):\n' + obj[keyLIST];
-				msg2 = msg2 + '\n\nedits ('+keyLISTEDITS+') - (count: '+count1+'):\n' + obj[keyLISTEDITS];
-				msg2 = msg2 + '\n\nsynced edits ('+keyLISTSYNCEDEDITS+'):\n' + obj[keyLISTSYNCEDEDITS];
-				msg2 = msg2 + '\n\nsynced deletes ('+keyLISTSYNCEDDELETES+'):\n' + obj[keyLISTSYNCEDDELETES];
-				if(!flagS3) this.debugInfoToFile(msg2,fileName,append,flagSilent) ;
-				if(flagS3) this.debugInfoToS3(msg2,obj.connectionString,obj.objectName,append,flagSilent) ;
-				if(typeof divId != 'undefined') $(divId).innerHTML = msg;
-				return;
-			};
-			var _cb = function(obj) {
-				var data = obj[keyLISTEDITS];
-				if(data == null) data = '';
-				var count1 = (data.match(/"data":/g) || []).length;
-				//window.onerror = function(err) { alert('Unhandled Javascript Error - in __dumpfiles  ' + JSON.stringify(err));};
-				var msg = '';
-				msg = msg + '<br><br><b>base List:</b><br>' + obj[keyLIST];
-				msg = msg + '<br><br><b>edits:(count: '+count1+')</b><br>' + obj[keyLISTEDITS];
-				msg = msg + '<br><br><b>synced edits:</b><br>' + obj[keyLISTSYNCEDEDITS];
-				msg = msg + '<br><br><b>synced deletes:</b><br>' + obj[keyLISTSYNCEDDELETES];
-				var msg2 = '';
-				msg2 = msg2 + '\n\nbase List:\n' + obj[keyLIST];
+		var ls = this._localStorageSettings;
+		var keyLIST = ls.namespace + '.' + 'LIST' + '.' + listId.toUpperCase();
+		var keyLISTEDITS = ls.namespace + '.' + 'LISTEDITS' + '.' + listId.toUpperCase();
+		var keyLISTSYNCEDEDITS = ls.namespace + '.' + 'LISTSYNCEDEDITS' + '.' + listId.toUpperCase();
+		var keyLISTSYNCEDDELETES = ls.namespace + '.' + 'LISTSYNCEDDELETES' + '.' + listId.toUpperCase();
+		var _wh = this.__persistWhere(listId);
+		if(_wh == 'ls') {
+			var obj = localStorage;
+			var data = obj[keyLISTEDITS];
+			if(data == null) data = '';
+			var count1 = (data.match(/"data":/g) || []).length;
+			var msg = '';
+			msg = msg + '<br><br><b>base List ('+keyLIST+'):</b><br>' + obj[keyLIST];
+			msg = msg + '<br><br><b>edits ('+keyLISTEDITS+') -(count : '+count1+'): </b><br>' + obj[keyLISTEDITS];
+			msg = msg + '<br><br><b>synced edits ('+keyLISTSYNCEDEDITS+'):</b><br>' + obj[keyLISTSYNCEDEDITS];
+			msg = msg + '<br><br><b>synced deletes ('+keyLISTSYNCEDDELETES+'):</b><br>' + obj[keyLISTSYNCEDDELETES];
+			var msg2 = '';
+			msg2 = msg2 + '\n\nbase List ('+keyLIST+'):\n' + obj[keyLIST];
+			msg2 = msg2 + '\n\nedits ('+keyLISTEDITS+') - (count: '+count1+'):\n' + obj[keyLISTEDITS];
+			msg2 = msg2 + '\n\nsynced edits ('+keyLISTSYNCEDEDITS+'):\n' + obj[keyLISTSYNCEDEDITS];
+			msg2 = msg2 + '\n\nsynced deletes ('+keyLISTSYNCEDDELETES+'):\n' + obj[keyLISTSYNCEDDELETES];
+			if(!flagS3) this.debugInfoToFile(msg2,fileName,append,flagSilent) ;
+			if(flagS3) this.debugInfoToS3(msg2,obj.connectionString,obj.objectName,append,flagSilent) ;
+			if(typeof divId != 'undefined') $(divId).innerHTML = msg;
+			return;
+		};
+		var _cb = function(obj) {
+			var data = obj[keyLISTEDITS];
+			if(data == null) data = '';
+			var count1 = (data.match(/"data":/g) || []).length;
+			//window.onerror = function(err) { alert('Unhandled Javascript Error - in __dumpfiles  ' + JSON.stringify(err));};
+			var msg = '';
+			msg = msg + '<br><br><b>base List:</b><br>' + obj[keyLIST];
+			msg = msg + '<br><br><b>edits:(count: '+count1+')</b><br>' + obj[keyLISTEDITS];
+			msg = msg + '<br><br><b>synced edits:</b><br>' + obj[keyLISTSYNCEDEDITS];
+			msg = msg + '<br><br><b>synced deletes:</b><br>' + obj[keyLISTSYNCEDDELETES];
+			var msg2 = '';
+			msg2 = msg2 + '\n\nbase List:\n' + obj[keyLIST];
 
-				msg2 = msg2 + '\n\nedits: (count: '+count1+')\n' + obj[keyLISTEDITS];
-				msg2 = msg2 + '\n\nsynced edits:\n' + obj[keyLISTSYNCEDEDITS];
-				msg2 = msg2 + '\n\nsynced deletes:\n' + obj[keyLISTSYNCEDDELETES];
-				if(!flagS3) that.debugInfoToFile(msg2,fileName,false,flagSilent) ;
-				if(flagS3) that.debugInfoToS3(msg2,obj.connectionString,obj.objectName,append,flagSilent) ;
+			msg2 = msg2 + '\n\nedits: (count: '+count1+')\n' + obj[keyLISTEDITS];
+			msg2 = msg2 + '\n\nsynced edits:\n' + obj[keyLISTSYNCEDEDITS];
+			msg2 = msg2 + '\n\nsynced deletes:\n' + obj[keyLISTSYNCEDDELETES];
+			if(!flagS3) that.debugInfoToFile(msg2,fileName,false,flagSilent) ;
+			if(flagS3) that.debugInfoToS3(msg2,obj.connectionString,obj.objectName,append,flagSilent) ;
 
-				if(typeof divId != 'undefined') $(divId).innerHTML = msg;
-			};
-			var that = this;
-			this._readListFromFile([keyLIST,keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES],_cb);
+			if(typeof divId != 'undefined') $(divId).innerHTML = msg;
+		};
+		var that = this;
+		this._readListFromFile([keyLIST,keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES],_cb);
 	},
+
 
 
 
@@ -15344,52 +15215,30 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 	////////////////////// ==============
 
 	_persistToLocalStorageInitializeKeys : function(ls,listId) {
-		//called by {dialog.object}.persistListToLocalStorage()
-		var flagIncludeBase = false;
-		if(typeof arguments[2] != 'undefined') flagIncludeBase = arguments[2];
-		var keyLIST = ls.namespace + '.' + 'LIST' + '.' + listId.toUpperCase();
-		var keyLISTEDITS = ls.namespace + '.' + 'LISTSYNCEDEDITS' + '.' + listId.toUpperCase();
-		var keyLISTSYNCEDEDITS = ls.namespace + '.' + 'LISTEDITS' + '.' + listId.toUpperCase();
-		var keyLISTSYNCEDDELETES = ls.namespace + '.' + 'LISTSYNCEDDELETES' + '.' + listId.toUpperCase();
-		var lObj = this.getControl(listId);
-		if(lObj.__persistWhere == 'FileSystem' && typeof cordova != 'undefined') {
-			if(flagIncludeBase) {
-				this._deletePersistedListFiles([keyLIST,keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES])
-			} else {
-				this._deletePersistedListFiles([keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES])
-			};
-		}  else if(lObj.__persistWhere == 'IndexDB' ) {
-
-
-
-			//this.idbDeleteItemPromise(keyLIST);
-
-			var ok = function(data) {
-				//alert('item was deleted')
-				console.log('Item was delete from IndexDB');
-			};
-			var error = function(err) {
-				alert('IndexDB item was not deleted')
-			};
-			this.idbDeleteItem(keyLIST,ok,error);
-
-
-			//not using these keys at present as persist to IndexDB persists the entire list
-			this.idbDeleteItem(keyLISTEDITS);
-			this.idbDeleteItem(keyLISTSYNCEDEDITS);
-			this.idbDeleteItem(keyLISTSYNCEDDELETES);
-
-		}
-
-		else {
-			if(flagIncludeBase) {
-				delete localStorage[keyLIST];
-			};
-			delete localStorage[keyLISTEDITS];
-			delete localStorage[keyLISTSYNCEDEDITS];
-			delete localStorage[keyLISTSYNCEDDELETES];
+	//called by {dialog.object}.persistListToLocalStorage()
+	var flagIncludeBase = false;
+	if(typeof arguments[2] != 'undefined') flagIncludeBase = arguments[2];
+	var keyLIST = ls.namespace + '.' + 'LIST' + '.' + listId.toUpperCase();
+	var keyLISTEDITS = ls.namespace + '.' + 'LISTSYNCEDEDITS' + '.' + listId.toUpperCase();
+	var keyLISTSYNCEDEDITS = ls.namespace + '.' + 'LISTEDITS' + '.' + listId.toUpperCase();
+	var keyLISTSYNCEDDELETES = ls.namespace + '.' + 'LISTSYNCEDDELETES' + '.' + listId.toUpperCase();
+	var lObj = this.getControl(listId);
+	if(lObj.__persistWhere == 'FileSystem' && typeof cordova != 'undefined') {
+		if(flagIncludeBase) {
+			this._deletePersistedListFiles([keyLIST,keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES])
+		} else {
+			this._deletePersistedListFiles([keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES])
 		};
-	},
+	} else {
+		if(flagIncludeBase) {
+			delete localStorage[keyLIST];
+		};
+		delete localStorage[keyLISTEDITS];
+		delete localStorage[keyLISTSYNCEDEDITS];
+		delete localStorage[keyLISTSYNCEDDELETES];
+	};
+},
+
 
 	_readKeyAsync: function(key,_wh,_cb) {
 		if(_wh == 'ls') {
@@ -15426,8 +15275,6 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 		var lObj = this.getControl(listId);
 		if(lObj.__persistWhere == 'FileSystem' && typeof cordova != 'undefined') {
 			return 'fs';
-		} else if( lObj.__persistWhere == 'IndexDB') {
-			return 'idb';
 		} else {
 			return 'ls';
 		};
@@ -15655,8 +15502,9 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 	},
 
 
-	persistListToLocalStorage :  function(listId) {
 
+
+	persistListToLocalStorage :  function(listId) {
 		var objIn = arguments[1];
 		if(typeof objIn == 'undefined') {objIn = {}};
 		var mode = objIn.mode;
@@ -15673,9 +15521,6 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 		var _pm_currentMode = 'update';   //update or populate
 		if(typeof lObj.__persistMode != 'undefined')  _pm_persistMode = lObj.__persistMode;
 		if(typeof lObj.__persistWhere != 'undefined')  _pm_persistWhere = lObj.__persistWhere;
-
-		var flagIndexDB = false;
-		if (_pm_persistWhere == 'IndexDB') flagIndexDB = true;
 
 
 		if(typeof objIn.mode != 'undefined')  _pm_currentMode = objIn.mode;
@@ -15707,9 +15552,6 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 		_s.readOnly = lObj.readOnly;
 		A5.u.json.preparse(_s);
 		var _pm_persistingWhat = 'fullList';
-
-
-
 		var _wh = this.__persistWhere(listId);
 
 		var _harvestCount = 9999999999;
@@ -15761,68 +15603,15 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 		if(lObj.__responseEndHasFired) flagResponseEndHasFired = lObj.__responseEndHasFired;
 
 		if(_wh == 'ls' && _pm_persistMode == 'full') {
-
-			//_pm_currentMode
-			var flag =  this._persistToLocalStorageLow(key,_dJSON, _pm_currentMode);
+			var flag =  this._persistToLocalStorageLow(key,_dJSON);
 			_dJSON = false;
 			return flag;
 
 		};
-
-
-
-		if(_wh == 'idb' && _pm_persistMode == 'full') {
-			//if you are using the old sync, when you sync data, this will fire multiple times.
-			//only fires once if using optimized sync
-			var flagDoPersist = lObj.__doPersist
-			if(typeof flagDoPersist == 'undefined') flagDoPersist = true;
-			if(flagDoPersist == false) {
-
-				return true;
-			}
-			//alert('just before persist to INDEXDB mode: ' + _pm_currentMode);
-			//alert('optimized sync: ' + lObj._optimizeSync)
-			//var lObj = {dialog.object}.getControl('list1');
-			//lObj.__doPersist = true;
-
-			if(lObj._optimizeSync) {
-				var obj = {};
-				//alert('fire the onBeforePersisToLocalStorage event');
-				if(lObj) lObj._executeEvent('onBeforePersistToLocalStorage',obj);
-				//alert('user data after calling the onBeforePersistToStorage event: ' + obj.userData);
-				if(typeof obj.userData != 'undefined') {
-					//inject userData into _dJSON
-					var o2 = JSON.parse(_dJSON)
-					o2.userData = obj.userData;
-					_dJSON = JSON.stringify(o2);
-				}
-			}
-			lObj.__doPersist = false;
-			var promise = this.idbSetItemPromise(key,_dJSON)
-			.then(data => {
-				//alert('in indexdb fire the onPersist event')
-				if(typeof obj == 'undefined') var obj = {};
-				obj.success = true;
-				obj.mode = _pm_currentMode
-				if(lObj) lObj._executeEvent('onPersistToLocalStorage',obj);
-
-			}).catch(e => {
-				if(typeof obj == 'undefined') var obj = {};
-				obj.success = false;
-				obj.mode = _pm_currentMode
-				if(lObj) lObj._executeEvent('onPersistToLocalStorage',obj);
-				}
-			)
-
-			return true;
-
-		};
-
 		if(_wh == 'fs') {
 			//file system
 			if(_pm_currentMode == 'populate') {
 				//persist immediately
-				//alert('persist to file');
 				this._persistListToFile(key,_dJSON);
 				_dJSON = false;
 				if(_pm_currentMode == 'populate') {
@@ -15857,7 +15646,7 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 				return true;
 			};
 		} else {
-			//local storage (or IndexDB)
+			//local storage
 			if(_pm_currentMode == 'populate') {
 				//persisist immediately
 				var flag =  this._persistToLocalStorageLow(key,_dJSON);
@@ -15880,11 +15669,7 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 		return flag;
 	},
 
-
 	_restoreListFromLocalStorage : function(listId) {
-
-		//alert('restore from local');
-
 		var ls = this._localStorageSettings;
 		var lObj = this.getControl(listId);
 		var _pm_persistMode = 'full';
@@ -15904,10 +15689,8 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 			var keyLISTEDITS = ls.namespace + '.' + 'LISTEDITS' + '.' + listId.toUpperCase();
 			var keyLISTSYNCEDEDITS = ls.namespace + '.' + 'LISTSYNCEDEDITS' + '.' + listId.toUpperCase();
 			var keyLISTSYNCEDDELETES = ls.namespace + '.' + 'LISTSYNCEDDELETES' + '.' + listId.toUpperCase();
-
 			var _wh = this.__persistWhere(listId);
-
-			if(_wh == 'ls' || _wh == 'idb') {
+			if(_wh == 'ls') {
 				var _baseList = localStorage.getItem(keyLIST);
 				o2.baseListJSON = _baseList;
 				var _edits = localStorage.getItem(keyLISTEDITS);
@@ -15917,114 +15700,78 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 				var _syncedDeletes = localStorage.getItem(keyLISTSYNCEDDELETES);
 				o2.listSyncedDeletesJSON = _syncedDeletes;
 
-				this._readFromLocalStorage(key,'_restoreListLow',JSON.stringify(o2),_pm_persistMode,_wh);
+				this._readFromLocalStorage(key,'_restoreListLow',JSON.stringify(o2),_pm_persistMode);
 			} else {
 				//file system
-				//alert('read from fs');
+
 				var _cb = function(obj) {
 					//alert('in _cb after _readListFromFile');
-					//console.log(JSON.stringify(obj,'','\t'));
-					//alert(JSON.stringify(obj,'','\t'))
 					//window.onerror = function(err) { alert('Unhandled Javascript Error - in _cb for _restoreListFromStorage:  ' + JSON.stringify(err));};
 					o2.baseListJSON = obj[keyLIST];
 					o2.listEditsJSON = obj[keyLISTEDITS];
 					o2.listSyncedEditsJSON = obj[keyLISTSYNCEDEDITS];
 					o2.listSyncedDeletesJSON = obj[keyLISTSYNCEDDELETES];
 					console.log('Restore list from file system');
-
 					//console.log('Base list: ' + o2.baseListJSON);
 					//console.log('Unsynced edits made since list last synced: ' + o2.listEditsJSON);
 					//console.log('Synced edits: ' + o2.listSyncedEditsJSON);
-					//alert('fs read done -- have the data - now call _readFromLocalStorage _pm_persistMode: ' + _pm_persistMode);
-
-					//debugger;
-					_dlgObj._readFromLocalStorage(key,'_restoreListLow',JSON.stringify(o2),_pm_persistMode, 'fs');
+					_dlgObj._readFromLocalStorage(key,'_restoreListLow',JSON.stringify(o2),_pm_persistMode);
 				};
 
-				//alert('call _readListFromFile');
+
 				this._readListFromFile([keyLIST,keyLISTEDITS,keyLISTSYNCEDEDITS,keyLISTSYNCEDDELETES],_cb);
 			};
 		} else {
 			//persist mode is 'full' -- so we must be using localStorage
-
-			this._readFromLocalStorage(key,'_restoreListLow',JSON.stringify(o2),_pm_persistMode,_wh);
+			this._readFromLocalStorage(key,'_restoreListLow',JSON.stringify(o2),_pm_persistMode);
 		};
 	},
 
+
+
 	_readFromLocalStorage: function(key,callbackFunctionName,number) {
-			//alert('_readFromLocalStorage xxxx');
-			_wh = arguments[4]
-			if(typeof _wh == 'undefined') _wh = 'ls';
-			var jsonOptions = arguments[2];
-			if(typeof arguments[3] == 'undefined') {
-				var _pm_persistMode = 'full';
-			} else {
-				var _pm_persistMode = arguments[3];
+		var jsonOptions = arguments[2];
+		if(typeof arguments[3] == 'undefined') {
+			var _pm_persistMode = 'full';
+		} else {
+			var _pm_persistMode = arguments[3];
+		};
+		if(typeof _pm_persistMode == 'undefined') _pm_persistMode = 'full';
+		var onError = null;
+		if(typeof jsonOptions == 'undefined') jsonOptions = '';
+		if(jsonOptions == null) jsonOptions = '';
+		if(typeof jsonOptions == 'function') {
+			onError = arguments[2];
+			jsonOptions = '';
+		};
+		var flagWP = this._embeddedMode;
+		var ls = this._localStorageSettings;
+		var o2 = {};
+		o2.key = key;
+		o2.callbackFunctionName = callbackFunctionName;
+		o2.number = number
+		o2.jsonOptions = jsonOptions;
+		if(flagWP && ls.workingPreviewTestingMode.toLowerCase() == 'filesystem') {
+			if(typeof callbackFunctionName == 'function') {
+				o2.callbackFunctionName = '__tempfunction';
+				this.__tempfunction = callbackFunctionName;
 			};
-			if(typeof _pm_persistMode == 'undefined') _pm_persistMode = 'full';
-			var onError = null;
-			if(typeof jsonOptions == 'undefined') jsonOptions = '';
-			if(jsonOptions == null) jsonOptions = '';
-			if(typeof jsonOptions == 'function') {
-				onError = arguments[2];
-				jsonOptions = '';
-			};
-			var flagWP = this._embeddedMode;
-			var ls = this._localStorageSettings;
-			var o2 = {};
-			o2.key = key;
-			o2.callbackFunctionName = callbackFunctionName;
-			o2.number = number
-			o2.jsonOptions = jsonOptions;
-			if(flagWP && ls.workingPreviewTestingMode.toLowerCase() == 'filesystem') {
-				if(typeof callbackFunctionName == 'function') {
-					o2.callbackFunctionName = '__tempfunction';
-					this.__tempfunction = callbackFunctionName;
+
+			var data = A5.ajax.buildURLParam('_localStorageRead',JSON.stringify(o2));
+			this.ajaxCallback('G',1,'system:workingPreviewSimulateLocalStorageRead','',data);
+		} else {
+			var flagHaveData = false;
+			if(jsonOptions != '') {
+				//if we are in 'edits' mode (not 'full' mode) we have already read all of the items (from either local storage, or the file system)
+				var jo = JSON.parse(jsonOptions);
+				if(typeof jo.baseListJSON != 'undefined' && jo.baseListJSON != '' ) {
+					var _dataJSON = jo.baseListJSON;
+					flagHaveData = true;
 				};
-
-				var data = A5.ajax.buildURLParam('_localStorageRead',JSON.stringify(o2));
-				this.ajaxCallback('G',1,'system:workingPreviewSimulateLocalStorageRead','',data);
-			} else {
-				var flagHaveData = false;
-				if(jsonOptions != '') {
-					//if we are in 'edits' mode (not 'full' mode) we have already read all of the items (from either local storage, or the file system)
-					var jo = JSON.parse(jsonOptions);
-					if(typeof jo.baseListJSON != 'undefined' && jo.baseListJSON != '' ) {
-						var _dataJSON = jo.baseListJSON;
-						flagHaveData = true;
-					};
-				};
-				if(!flagHaveData) {
-					if(_wh == 'ls') {
-						var _dataJSON = localStorage.getItem(key);
-						this._readFromLocalStorage_part2(_dataJSON,jsonOptions,callbackFunctionName,_pm_persistMode)
-					} else if(_wh == 'fs') {
-						//alert('file system jjjjjjj');
-						//alert('_dataJSON' + _dataJSON)
-					} else if(_wh == 'idb') {
-						//alert('read data from indexdb: ' + callbackFunctionName);
-						//console.log(key)
-						//console.log(callbackFunctionName)
-						var promise = this.idbGetItemPromise(key);
-						promise.then(d => {
-
-							//alert('got the data ' + typeof d + ' callbackFunctionName: ' + callbackFunctionName)
-							//console.log(d)
-							if(typeof d != 'undefined' && d != null) {
-								this._readFromLocalStorage_part2(d,jsonOptions,callbackFunctionName,_pm_persistMode)
-							}
-						})
-					}
-				}
-				//alert('do read flagHaveData ' + flagHaveData)
-				this._readFromLocalStorage_part2(_dataJSON,jsonOptions,callbackFunctionName,_pm_persistMode)
 			};
-		},
+			if(!flagHaveData) var _dataJSON = localStorage.getItem(key);
 
-		_readFromLocalStorage_part2: function(_dataJSON,jsonOptions,callbackFunctionName, _pm_persistMode) {
-				//alert('_readFromLocalStorage_part2:');
-
-				if(_dataJSON == null) {
+			if(_dataJSON == null) {
 				if(_pm_persistMode == 'full') {
 					try{
 						var listId = jo.listId;
@@ -16074,32 +15821,25 @@ _persistToLocalStorageLow: function(key,_dJSON,_mode) {
 				if(typeof number != 'undefined') {
 					if(number == 1) flagFireEvent = false;
 				}
-
-				//alert('4: callbackFunctionName: ' + callbackFunctionName)
-				//debugger;
-
-
-				if(flagFireEvent && typeof callbackFunctionName != 'undefined') this[callbackFunctionName](_data,_jO);
+				if(flagFireEvent) this[callbackFunctionName](_data,_jO);
 			} else {
-				if(typeof callbackFunctionName != 'undefined') {
-					if(typeof callbackFunctionName == 'string') {
-						this[callbackFunctionName](_data);
-					} else {
-						//reading a data cache value
-						callbackFunctionName.call(this,_data); //data cache
-						_dataJSON = '';
-						_data = '';
-					};
-				}
+				if(typeof callbackFunctionName == 'string') {
+					this[callbackFunctionName](_data);
+				} else {
+					//reading a data cache value
+					callbackFunctionName.call(this,_data); //data cache
+					_dataJSON = '';
+					_data = '';
+				};
 			};
+		};
+	},
 
 
-		},
 
 
-_restoreListLow : function(_JData,obj) {
+	_restoreListLow : function(_JData,obj) {
 		//window.onerror = function(err) { alert('Unhandled Javascript Error - _restoreListLow:  ' + JSON.stringify(err));};
-		//alert('_restore List Low');
 		var _mode = 'full';
 		if(typeof obj._persistMode != 'undefined') {
 			if(obj._persistMode == 'edits') {
@@ -16211,17 +15951,7 @@ _restoreListLow : function(_JData,obj) {
 				//alert('list has just been restored. fire incremental refesh after restore');
 				lObj._incrementalRefreshAfterLoad();
 			} else {
-				var flagGetBase64Data = false;
-				try{
-					flagGetBase64Data = lObj._indexdb.mediafiles.download;
-				}catch(e) { }
-
-
-				if(flagGetBase64Data) {
-					//do not fire onListReady - it will be fired by a5DialogHelper_getBase64DataForImages()
-				} else {
-					that._list_executeEvent(obj.listId,'onListReady',{});
-				}
+				that._list_executeEvent(obj.listId,'onListReady',{});
 				//alert('list has just been restored, but no incremental refresh: fetch media files when phonegap ready');
 				that._delayTillPhoneGapReady(lObj._fetchMediaFiles,lObj);
 
@@ -16231,6 +15961,8 @@ _restoreListLow : function(_JData,obj) {
 		this.refreshClientSideComputations();
 		this._restoringVariables = false;
 	},
+
+
 
 
 	_persistFS: function() {
@@ -16287,17 +16019,18 @@ _restoreListLow : function(_JData,obj) {
 		};
 		readFileList_low(fileArray,_cb);
 	},
-	_persistListToFile: function(key,data,_cbSave) {
+
+
+
+_persistListToFile: function(key,data,_cbSave) {
 	var listName = key.split('.');
 	//derive the list name from the key.
 	listName = listName[listName.length-1];
 	var lObj = this.getControl(listName);
 	//alert('list Name: ' + listName);
 
-	//alert('persist to file');
 	//alert(data)
 	//alert(data.length);
-	//debugger;
 		var _dlgObj = this;
 		var _fileRoot = _dlgObj._persistFS();
 		var _folder = _dlgObj._persistFolder();
@@ -16361,30 +16094,14 @@ _restoreListLow : function(_JData,obj) {
 			return false;
 	},
 
+	saveListEdits: function(listId) {
 
-		saveListEdits: function(listId) {
 			var lObj = this.getControl(listId);
 			if(!lObj) return;
-			var opsIn = typeof arguments[1] != 'undefined' ? arguments[1] : {};
-			var flagPhase2 =  false;
-			if(typeof opsIn != 'undefined' && typeof opsIn.phase2 != 'undefined') flagPhase2 = opsIn.phase2 //used when List is persisted to IndexDB
-			if(flagPhase2) {
-				//if in phase2 skip over everything and just make the callback to save the data;
-				var data = this.__listDataForPhase2;
-				//data contains the list data BEFORE the indexdb keys are replaced with real urls.
-				//so we need to get the current data in the list and send that back
-				data = data + '&' + A5.ajax.buildURLParam('_listData',JSON.stringify(lObj._data));
-				var objS = this.__objSForPhase2;
-				var flagSyncMediaFiles = this.__flagSyncMediaFilesForPhase2;
-				data = data + '&flagSyncMediaFiles=' + flagSyncMediaFiles;
-				lObj.__doPersist = true;
-				this.ajaxCallback('G','','system:persistListData','',data,objS) ;
-				delete this.__listDataForPhase2;
-				delete this.__objSForPhase2;
-				this.__flagSyncMediaFilesForPhase2;
-				return;
-			}
-			lObj.__doPersist = true;
+
+
+
+
 			if(lObj._dataSourceType == 'DBF') {alert('Not supported for .dbf tables'); return};
 
 			var flagCurrentRowDetailViewIsDirty = false;
@@ -16445,10 +16162,6 @@ _restoreListLow : function(_JData,obj) {
 
 
 			var opsIn = typeof arguments[1] != 'undefined' ? arguments[1] : {};
-
-			var flagPhase2 =  false;
-			if(typeof opsIn.flagPhase2 != 'undefined') flagPhase2 = true; //used when List is persisted to IndexDB
-
 
 			var options = opsIn.options
 			if(typeof options == 'undefined') options = {};
@@ -16559,8 +16272,6 @@ _restoreListLow : function(_JData,obj) {
 			var rows = 'all';
 			if(typeof opsIn.rows != 'undefined') rows = opsIn.rows;
 			objSSaved.rows = rows;
-
-
 
 			if(flagCheckForDirtyMediaFiles) {
 				if(typeof checkifserveravailable == 'undefined') checkifserveravailable = false;
@@ -16725,9 +16436,7 @@ _restoreListLow : function(_JData,obj) {
 				if(lParent) {
 					var parentRow = lParent.selection[0];
 					if(typeof parentRow != 'undefined') {
-						var r2 = lParent._dataMap[parentRow]
-						var parentData = lParent._data[r2];
-						//var parentData = lParent._rData[parentRow];
+						var parentData = lParent._rData[parentRow];
 						data.push(A5.ajax.buildURLParam('_parentListData',JSON.stringify(parentData)));
 						data.push(A5.ajax.buildURLParam('_linkingFields',JSON.stringify(listObj._linkingKeys)));
 					};
@@ -16745,14 +16454,10 @@ _restoreListLow : function(_JData,obj) {
 
 			data.push(A5.ajax.buildURLParam('_currentlyFocusedRow',currentlyFocusedRow));
 
-
-
 			var flagFixMediaFileReferences = false;
 			if(typeof opsIn.fixMediaFileReferences != 'undefined') flagFixMediaFileReferences = opsIn.fixMediaFileReferences;
 			data.push(A5.ajax.buildURLParam('_fixMediaFileReferences',flagFixMediaFileReferences));
 			data = data.join('&');
-
-
 			data = data + '&_listName='+listId+'&_listControls=' + arr.join(',');
 			flagPullSync = false;
 			if(typeof opsIn.pullSync != 'undefined') {
@@ -16768,6 +16473,8 @@ _restoreListLow : function(_JData,obj) {
 				objS.maximumAge = 30000;
 			};
 			objS.flagSaveListData = true;
+
+
 
 
 			if(typeof ajaxCallbackTimeout != 'undefined') objS.ajaxCallbackTimeout = ajaxCallbackTimeout;
@@ -16816,61 +16523,12 @@ _restoreListLow : function(_JData,obj) {
 				return;
 			}
 
+			data = data + '&flagSyncMediaFiles=' + flagSyncMediaFiles
+			this.ajaxCallback('G','','system:persistListData','',data,objS) ;
 
-			//alert('List Id: ' + listId);
-			var lObj = this.getControl(listId);
-			var flagIndexDB = false;
+		},
 
-			var persistLocation = '';
-			if(lObj.__flagPersist) {
-				persistLocation = lObj.__persistWhere;
-			};
-
-
-
-			var flagPhase2 = false;
-			if(typeof opsIn.phase2 != 'undefined') flagPhase2 = opsIn.phase2; //used when List is persisted to IndexDB
-			//alert('flag in phase 2: ' + flagPhase2);
-			if(persistLocation.toLowerCase() == 'indexdb' && !flagPhase2) {
-				var done = function(arr) {
-					//alert('got keys - count: ' + arr.length);
-					this.__listDataForPhase2 = data;
-					this.__objSForPhase2;
-					this.__flagSyncMediaFilesForPhase2 = flagSyncMediaFiles;
-					if(arr.length == 0) {
-						data = data + '&flagSyncMediaFiles=' + flagSyncMediaFiles
-						this.ajaxCallback('G','','system:persistListData','',data,objS) ;
-						return;
-					}
-					var b64data = '';
-					b64data = A5.ajax.buildURLParam('__base64Data',JSON.stringify(arr));
-					data = data + '&flagSyncMediaFiles=' + flagSyncMediaFiles + '&' + b64data + '&_listName=' + lObj.listVariableName;
-					var imagesArray  = lObj._harvestMediaFields({indexDB:true, dirtyOnly: false});
-					var __arrayData = A5.ajax.buildURLParam('__array',JSON.stringify(imagesArray));
-					data = data + '&' + __arrayData;
-					//force chunked response on so that 'system:persistListDataIndexDBImages' can send updates to client
-					objS.chunkedResponses.allow = true;
-					this._list_executeEvent(lObj.listVariableName,'detailView.beforeMediaFilesUploaded',{array:imagesArray});
-					this.ajaxCallback('G','','system:persistListDataIndexDBImages','',data,objS) ;
-				}
-
-				var err = function() {
-					alert('error334');
-				}
-				this.idbGetItemsIntoArray('INDEXDB_temporary',done,err)
-
-
-			} else {
-				//alert('executing phase2');
-				//objS.chunkedResponses.allow = true;
-				data = data + '&flagSyncMediaFiles=' + flagSyncMediaFiles
-				this.ajaxCallback('G','','system:persistListData','',data,objS) ;
-			}
-
-
-	},
 	ajaxCallback: function(part,rowNum,xbasicFunction) {
-		this._getOnlineStatus();
 
 		var flagLogTime = false;
 		if(A5 && A5.logTime) flagLogTime = A5.logTime;
@@ -17144,14 +16802,6 @@ _restoreListLow : function(_JData,obj) {
 
 		flagChunkedResponse = flagChunkedResponse && !this._embeddedMode;
 
-//		if(!flagChunkedResponse) {
-//			if(typeof obj.responseText != 'undefined') {
-//				if(obj.responseText.indexOf('__chunkedresponsemessagesdone__') > -1) {
-//					flagChunkedResponse = true;
-//				}
-//			}
-//		}
-
 		if(flagChunkedResponse) {
 			var startTime = Date.now();
 			var length = 0;
@@ -17164,8 +16814,8 @@ _restoreListLow : function(_JData,obj) {
 			aFail.handle = function(obj) {
 				var resp = obj.responseText;
 				if(typeof resp != 'undefined') {
-					if(resp.indexOf('/*__chunkedresponsemessagesdone__*/') > -1) {
-						resp = resp.split('/*__chunkedresponsemessagesdone__*/')[1];
+					if(resp.indexOf('__chunkedresponsemessagesdone__') > -1) {
+						resp = resp.split('__chunkedresponsemessagesdone__')[1];
 						if(resp.indexOf(marker) > -1) eval(resp);
 					}
 				}
@@ -17180,7 +16830,7 @@ _restoreListLow : function(_JData,obj) {
 
 					var resp = this.responseText;
 					if(typeof resp != 'undefined') {
-						var endTokenIndex = resp.indexOf('/*__chunkedresponsemessagesdone__*/',length);
+						var endTokenIndex = resp.indexOf('__chunkedresponsemessagesdone__',length);
 						if(endTokenIndex != -1) {
 							resp = resp.substring(length,endTokenIndex);
 							done = true;
@@ -17290,6 +16940,7 @@ _restoreListLow : function(_JData,obj) {
 		}
 	},
 
+
 	//////////////////////=========end list methods====================///////////////////////
 
 
@@ -17359,26 +17010,17 @@ _restoreListLow : function(_JData,obj) {
 		if(typeof cntObj.flagChunkedResponse != 'undefined') {
 			flagChunked = cntObj.flagChunkedResponse;
 		}
-
-
-		//var pct = ((startingRow-batchSize)/totalDirtyRows) * 100;
+		var pct = ((startingRow-batchSize)/totalDirtyRows) * 100;
 		var lObj = this.getControl(listId);
 		var obj = {};
 		obj.totalDirtyRows = totalDirtyRows;
 		obj.batchSize = batchSize;
 		obj.startingRow = startingRow;
-		//obj.pctComplete = pct;
-		obj.countObject = cntObj;
-
-		var numberOfBatchesRequired = Math.ceil(totalDirtyRows / batchSize)
-		if(typeof batchNumber == 'undefined') batchNumber = 1;
-		pct = (batchNumber/numberOfBatchesRequired) * 100;
 		obj.pctComplete = pct;
-		if(pct == 100) batchNumber = 0;
-
-		batchNumber = batchNumber + 1;
+		obj.countObject = cntObj;
 		lObj._setSynchProgress(pct);
 		var result = this._list_executeEvent(listId,'detailView.afterSynchronizeListBatch',obj);
+
 		if(lObj._flagCancelBatchSynchronize) {
 			lObj._hideSynchProgress();
 			this._list_executeEvent(listId,'detailView.afterCancelBatch',obj);
@@ -17391,7 +17033,7 @@ _restoreListLow : function(_JData,obj) {
 			return false;
 		}
 
-		if(result) this.saveListEdits(listId,{chunked: {allow:flagChunked},batchNumber: batchNumber, batchSize: batchSize, _startingRow: startingRow, _countObject: obj.countObject });
+		if(result) this.saveListEdits(listId,{chunked: {allow:flagChunked}, batchSize: batchSize, _startingRow: startingRow, _countObject: obj.countObject });
 	},
 
 	countRecordsToSynch: function(listId) {
@@ -17583,7 +17225,6 @@ _restoreListLow : function(_JData,obj) {
 	},
 
 	_formBox_computeSectionLayout: function(section,layouttype) {
-
 		var items = section.items;
 		var calcitemlayout = function(item) {
 			  var layout = item.sectionLayout || {};
@@ -18166,7 +17807,6 @@ _restoreListLow : function(_JData,obj) {
 							}
 
 						if(this.getPointer(map[i].control)  && (flagControlDirty || flagNewRow) ) {
-
 							data[map[i].field] = valToUse;
 							if(sourceImageName != '') {
 								data[map[i].field + '__A5SOURCEIMAGENAME'] = sourceImageName;
@@ -18418,8 +18058,7 @@ _restoreListLow : function(_JData,obj) {
 			for(var i = 0; i < _embeddedImages.length; i++) {
 				imgname = _embeddedImages[i];
 				imgdata = data[imgname];
-				//sr 1/6/2022 - used to check for typeof imagdata == 'undefined' as well, but this was wrong as images that were not dirty were getting set to null
-				if(imgdata == '') data[imgname] = nullImage;
+				if(imgdata == undefined || imgdata == '') data[imgname] = nullImage;
 			}
 		}
 
@@ -19023,16 +18662,6 @@ _restoreListLow : function(_JData,obj) {
 		}
 	},
 
-	executeWatchEventForControl: function(control) {
-		var obj = this._watchEvents;
-
-		if(typeof obj == 'undefined') return ;
-		var obj2 = obj[control];
-		if(typeof obj2 == 'undefined') return ;
-		js = obj2.javascript;
-		if(typeof obj2 == 'undefined') return;
-		eval(js);
-	},
 
 	getOrientation: function() {
 		var ele = $('MOBILESIMULATORDEVICEPICKER');
@@ -21127,11 +20756,6 @@ _restoreListLow : function(_JData,obj) {
 		}
 
 
-
-		//perhaps it is an html editor
-		var obj = window[this.dialogId + '_' + name.toUpperCase() + '_RTEObj'];
-		if(obj) return obj
-
 		return false;
 
 	},
@@ -21549,15 +21173,6 @@ getValue:  function(name) {
 		}
 		return settings;
 	},
-
-
-	setDefaultValue: function(name,value) {
-		name = name.toUpperCase()
-		var obj = {};
-		obj[name] = value;
-		this.populate(obj)
-	},
-
 	setValue: function(name, value) {
 
 		var flagFormBox = false;
@@ -21766,17 +21381,6 @@ getValue:  function(name) {
 
 
 			} else if(colType == 'label'  || colType == 'link'  || colType == 'img'){
-				if(colType == 'img') {
-					if(value.indexOf('INDEXDB_') >-1) {
-						var _ok = function(data) {
-							var prefix = 'data:image/png;base64,';
-							data = prefix + data;
-							$svs(this.dialogId+'.V.R'+row+'.'+cntrlInfoObj.controlName,data);
-						}
-						this.idbGetItem(value,_ok)
-						return;
-					}
-				}
 				if(typeof this.addCustomSchemeForAlphaWkWebView != 'undefined') {
 					value = this.addCustomSchemeForAlphaWkWebView(value);
 				}
@@ -28297,7 +27901,7 @@ _listRefreshCascadingLists: function(listId) {
 
 				if(typeof lObj.synchronizeImmediately != 'undefined') {
 					if(lObj.synchronizeImmediately) {
-
+					alert('do the sync')
 						this.saveListEdits(lObj.listVariableName,{rows: 'allRows'});
 					}
 				}
@@ -28312,7 +27916,7 @@ _listRefreshCascadingLists: function(listId) {
 				lObj.updateTableRow(r,d);
 				if(typeof lObj.synchronizeImmediately != 'undefined') {
 					if(lObj.synchronizeImmediately) {
-
+					alert('do the sync 2');
 						this.saveListEdits(lObj.listVariableName,{rows: 'allRows'});
 					}
 				}
@@ -29612,7 +29216,7 @@ A5.makeArrayOfArrays = function() {
 
 	
 /*
-Copyright (c) 2001, 2022 Alpha Software Corporation
+Copyright (c) 2001, 2021 Alpha Software Corporation
 All Rights Reserved.
 
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,

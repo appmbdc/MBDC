@@ -51,14 +51,14 @@ function _phoneGapSettings() {
     "plugins": {
         "cordova-plugin-device": "npm",
         "cordova-plugin-file": "npm",
-        "cordova-plugin-file-transfer": "npm",
+        "cordova-plugin-file-transfer": "git",
         "cordova-plugin-network-information": "npm",
         "cordova-plugin-dialogs": "npm",
         "cordova-plugin-splashscreen": "npm",
         "cordova-plugin-alpha-wkwebview-file-xhr": "git",
         "cordova-plugin-androidx-adapter": "npm",
         "cordova-plugin-camera-with-exif": "npm",
-        "cordova-plugin-whitelist": "npm"
+        "cordova-plugin-file-transfer": "git"
     }
 };
 }

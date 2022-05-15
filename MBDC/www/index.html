@@ -41,7 +41,7 @@ iframe {-webkit-user-select: text;}
 .A5ContainerAlignRight {padding: 2px; margin-left:auto;text-align: right; box-sizing: border-box;}
 
 .A5ContainerAlignCenter > .A5CWLayout, .A5ContainerAlignLeft > .A5CWLayout, .A5ContainerAlignRight > .A5CWLayout, .A5ContainerAlignCenter > .A5container, .A5ContainerAlignLeft > .A5container, .A5ContainerAlignRight > .A5container  {display: inline-block; float: none;}
-
+.A5Disabled {opacity: .5}
 
 
 .A5FloatingLabelCont {	position: relative;	margin-top: 20px;}
@@ -119,8 +119,8 @@ iframe {-webkit-user-select: text;}
 <style type="text/css">
 .icon {
   vertical-align: middle;
-  width: 26px;
-  height: 26px;
+  width: 15px;
+  height: 15px;
   fill: #000;
   stroke: #000; }
 .iconSizeable {
@@ -175,7 +175,7 @@ iframe {-webkit-user-select: text;}
 
 if(!A5.controlBar) { 	
 /*
-Copyright (c) 2001, 2021 Alpha Software Corporation
+Copyright (c) 2001, 2022 Alpha Software Corporation
 All Rights Reserved.
 This JavaScript library is licensed exclusively for use with Alpha Anywhere, Alpha Five,
 Alpha Five Application Server, Alpha Anywhere Application Server,
@@ -308,7 +308,7 @@ if(typeof DLG1_DlgObj == 'object') {
 	body: {
 		content: {
 			type: 'html',
-			src: '<div \tid="DLG1.V.R1.TWOFACTORAUTHENTICATION_STAGE1"   \r\n\t\t\tA5-containerType="none"\r\n\t\t\tclass="A5CWLayout "  style="text-align: center; width: 100%; "  >\r\n<div style="display: table; margin: auto;">\r\n<div class="A5CWLayout" style="width: 250px" >\r\n\t<input\ttype="text" id="DLG1.V.R1.USERID" title=""     class="iOS7Edit " style="width: 100%; height: 30px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"    name="V.R1.USERID"    value=""    />\r\n\r\n</div>\r\n<form onsubmit="__preventDefault(event);"><div class="A5CWLayout" style="width: 250px" >\r\n\t<input\ttype="password" id="DLG1.V.R1.PASSWORD" title=""     class="iOS7Edit " style="width: 100%; height: 30px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"    name="V.R1.PASSWORD"    value=""    />\r\n\r\n</div><br  style="clear:both; " /></form>\r\n<div class="A5CWLayout" style="width: 250px" >\r\n\t<button type="button" id="DLG1.V.R1.LOGIN_BUTTON"    ></button>\r\n</div><br  style="clear:both; " />\r\n<div class="A5CWLayout" style="width: 250px" >\r\n\t<button type="button" id="DLG1.V.R1.BUTTON_NEWUSER"    ></button>\r\n</div><br  style="clear:both; " />\r\n<div class="A5CWLayout" style="width: 100%"  id="DLG1.V.R1.LOGIN_ERRORS" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" _type="placeholder">\r\n</div><br  style="clear:both; " />\r\n<div style="font: 0pt arial;clear:both;"></div>\r\n\t</div>\r\n\t</div>\r\n<br  id="DLG1.V.R1.TWOFACTORAUTHENTICATION_STAGE1.BREAK"  style="clear:both; " />\r\n<div class="A5floatClear"></div>'
+			src: '<div \tid="DLG1.V.R1.TWOFACTORAUTHENTICATION_STAGE1"   \r\n\t\t\tA5-containerType="none"\r\n\t\t\tclass="A5CWLayout "  style="text-align: center; width: 100%; "  >\r\n<div style="display: table; margin: auto;">\r\n<div class="A5CWLayout" style="width: 250px" >\r\n\t<input\ttype="text" id="DLG1.V.R1.USERID" title=""     class="iOS7Edit " style="width: 100%; height: 30px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"    name="V.R1.USERID"    value=""    />\r\n\r\n</div>\r\n<form onsubmit="__preventDefault(event);"><div class="A5CWLayout" style="width: 250px" >\r\n\t<input\ttype="password" id="DLG1.V.R1.PASSWORD" title=""     class="iOS7Edit " style="width: 100%; height: 30px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"    name="V.R1.PASSWORD"    value=""    />\r\n\r\n</div><br  style="clear:both; " /></form>\r\n<div class="A5CWLayout" style="width: 250px" >\r\n\t<button type="button" id="DLG1.V.R1.LOGIN_BUTTON"    ></button>\r\n</div><br  style="clear:both; " />\r\n<div class="A5CWLayout" style="width: 250px" >\r\n\t<button type="button" id="DLG1.V.R1.BUTTON_NEWUSER"    ></button>\r\n</div><br  style="clear:both; " />\r\n<div class="A5CWLayout" style="width: 100%"  id="DLG1.V.R1.LOGIN_ERRORS" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" _type="placeholder">\r\n</div><br  style="clear:both; " />\r\n<div class="A5CWLayout" style="width: " >\r\n\t<div id="DLG1.V.R1.STATICTEXT_29" title=""  class="" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   >Sunday Test</div>\r\n</div><br  style="clear:both; " />\r\n<div style="font: 0pt arial;clear:both;"></div>\r\n\t</div>\r\n\t</div>\r\n<br  id="DLG1.V.R1.TWOFACTORAUTHENTICATION_STAGE1.BREAK"  style="clear:both; " />\r\n<div class="A5floatClear"></div>'
 		},
 		scroll: {
 			axis: 'y',
@@ -344,8 +344,8 @@ if(typeof DLG1_DlgObj == 'object') {
 	},
 	overlay: {
 	},
-	onSize: function() {
-if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANEL_LOGIN'); };;setTimeout(function() { 
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj && DLG1_DlgObj._pdfViewerResizeToFitPanelCard) DLG1_DlgObj._pdfViewerResizeToFitPanelCard('PANEL_LOGIN',this);
+if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj != null && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANEL_LOGIN'); };;setTimeout(function() { 
 	if(DLG1_DlgObj && DLG1_DlgObj._turnResizeOnForListsOnPanel) DLG1_DlgObj._turnResizeOnForListsOnPanel('PANEL_LOGIN')
 },0);
 },
@@ -404,8 +404,8 @@ cb.refresh();},
 	},
 	overlay: {
 	},
-	onSize: function() {
-if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANEL_SELECT_YEAR'); };;setTimeout(function() { 
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj && DLG1_DlgObj._pdfViewerResizeToFitPanelCard) DLG1_DlgObj._pdfViewerResizeToFitPanelCard('PANEL_SELECT_YEAR',this);
+if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj != null && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANEL_SELECT_YEAR'); };;setTimeout(function() { 
 	if(DLG1_DlgObj && DLG1_DlgObj._turnResizeOnForListsOnPanel) DLG1_DlgObj._turnResizeOnForListsOnPanel('PANEL_SELECT_YEAR')
 },0);
 },
@@ -462,12 +462,19 @@ if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != '
 	},
 	overlay: {
 	},
-	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_FAMILY'); };var that = window['DLG1_PanelObj'];
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj && DLG1_DlgObj._pdfViewerResizeToFitPanelCard) DLG1_DlgObj._pdfViewerResizeToFitPanelCard('PANELCARD_FAMILY',this);
+if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj != null && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_FAMILY'); };
+var containingPanel = 'PANELCARD_FAMILY';
+if(containingPanel == '') {
+ var that = window['DLG1_PanelObj'];
+} else {
+ if(typeof DLG1_DlgObj != 'undefined' ) var that = DLG1_DlgObj.panelGet(containingPanel);
+}
 setTimeout(function() {
  var panelName = 'PANELCARD_FAMILY';
  var runJS = true;
- if(typeof that.state == 'undefined') that.state = {};
- if(typeof that.state._render != 'undefined') {
+ if(that && typeof that.state == 'undefined') that.state = {};
+ if(that && typeof that.state._render != 'undefined') {
   var rs = that.state._render[panelName];
   if(typeof rs !=  'undefined') {
    if(rs == true) {
@@ -479,8 +486,10 @@ setTimeout(function() {
   setTimeout(function(){DLG1_DlgObj._functions.runAction_1f8c6f72_a37d_4c3a_aa89_99bb7a8a4d49();},1000);;
 setTimeout(function(){DLG1_DlgObj._functions.runAction_080efe6f_eeb1_477e_a35e_28ce7b7d89f3();},1000);;
 setTimeout(function(){DLG1_DlgObj._functions.runAction_b5c66d50_4de5_4627_a63c_a0d6a1687d0d();},1000);;
-  if(typeof that.state._render == 'undefined') that.state._render = {};
-  that.state._render[panelName] = true;
+  if(that) {
+   if(typeof that.state._render == 'undefined') that.state._render = {};
+   that.state._render[panelName] = true;
+  }
  }
 },80);setTimeout(function() { 
 	if(DLG1_DlgObj && DLG1_DlgObj._turnResizeOnForListsOnPanel) DLG1_DlgObj._turnResizeOnForListsOnPanel('PANELCARD_FAMILY')
@@ -539,8 +548,8 @@ setTimeout(function(){DLG1_DlgObj._functions.runAction_b5c66d50_4de5_4627_a63c_a
 	},
 	overlay: {
 	},
-	onSize: function() {
-if(typeof DLG1_DlgObj != 'undefined' && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_HIDDEN'); };;setTimeout(function() { 
+	onSize: function() {if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj && DLG1_DlgObj._pdfViewerResizeToFitPanelCard) DLG1_DlgObj._pdfViewerResizeToFitPanelCard('PANELCARD_HIDDEN',this);
+if(typeof DLG1_DlgObj != 'undefined' && DLG1_DlgObj != null && typeof DLG1_DlgObj._panelCardResize != 'undefined') { DLG1_DlgObj._panelCardResize('PANELCARD_HIDDEN'); };;setTimeout(function() { 
 	if(DLG1_DlgObj && DLG1_DlgObj._turnResizeOnForListsOnPanel) DLG1_DlgObj._turnResizeOnForListsOnPanel('PANELCARD_HIDDEN')
 },0);
 },
@@ -588,6 +597,7 @@ if(this.state.activePanel) {
 }
 var panelName = this.state.activePanel;
 if(panelName == 'PANELCARD_FAMILY') {
+alert(2);
  setTimeout(function(){DLG1_DlgObj._functions.runAction_b5c66d50_4de5_4627_a63c_a0d6a1687d0d();},1000);;
 }
 var pSize = $('DLG1.R1.PANEL.1').style.width;
@@ -680,7 +690,7 @@ PANEL_LOGIN : 'PANEL_LOGIN',PANEL_SELECT_YEAR : 'PANEL_SELECT_YEAR',PANELCARD_FA
 };
 if(typeof DLG1_DlgObj == 'object') DLG1_DlgObj._destroy();
 var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
-	ajaxURL: 'https://www.mbdcregistration.com/sqltest/UNIV_MAINPAGE.a5wcmp?__virtualPage=__a5RunDialog.a5w&__dialogFilename=UNIV_MAINPAGE&__alias=DLG1&__unsaved=no',
+	ajaxURL: 'https://www.mbdcregistration.com:444/sqltest/UNIV_MAINPAGE.a5wcmp?__virtualPage=__a5RunDialog.a5w&__dialogFilename=UNIV_MAINPAGE&__alias=DLG1&__unsaved=no',
 	_embeddedMode: false,
 	_livePreviewInBuilder: false,
 	componentGUID: '5bc2af4f-9419-46a7-8df4-5b02019e568a',
@@ -887,6 +897,7 @@ DLG1_DlgObj._findActiveLayoutRule();
 A5.__componentObj = DLG1_DlgObj;
 A5.map._fn='https://maps.googleapis.com/maps/api/js?key=&libraries=geometry,places&callback=A5.map.init';
 DLG1_DlgObj.loadCSSFile('css/MBDC.css');
+DLG1_DlgObj.loadCSSFile('css/CSSIcons/font-awesome/css/font-awesome.min.css');
 DLG1_DlgObj._tabObjects = [];
 A5.loadJavascript('//=========================================\n//will only allow to type CHR  used in "OnKeyDown"  not good for mobile\nfunction typeOnlyAlphaOrSpace(event){\n\tvar key = event.keyCode;\n\treturn ((key >= 65 && key <= 90 || key==32 || key==9) || key == 8);\n}\n\n//will only allow to type NUMBER  used in "OnKeyDown"  not good for num pad  and not good for mobile\nfunction typeOnlyNumberOrSpace(event){\n\tvar key = event.keyCode;\n\treturn ((key > 47 && key < 58 || key==32 || key==9) || key == 8);\n}\n\nfunction moveCursorToEnd(el) {\n    if (typeof el.selectionStart == "number") {\n        el.selectionStart = el.selectionEnd = el.value.length;\n    } else if (typeof el.createTextRange != "undefined") {\n        el.focus();\n        var range = el.createTextRange();\n        range.collapse(false);\n        range.select();\n    }\n}\n\nfunction  Midstring(sttr, start, len) {\n\tif (start < 0 || len < 0){\n\t\treturn "";\n\t\tvar iEnd, iLen = String(sttr).length;}\n\tif (start + len > iLen){\n\t\tiEnd = iLen;}\n\telse{\n\t\tiEnd = start + len;\n\t\treturn String(sttr).substring(start,iEnd);}\n}\n\nfunction LTrim( value ) {\n\tvar re = /\\s*((\\S+\\s*)*)/;\n\treturn value.replace(re, "$1");\n}\n\nfunction RTrim( value ) {\n\tvar re = /((\\s*\\S+)*)\\s*/;\n\treturn value.replace(re, "$1");\n}\n\nfunction capitalizeFirst(obj) {\n\tvar val = obj.value;\n\tvar newVal = \'\';\n\tval = val.split(\' \');\n\tfor(var c=0; c < val.length; c++) {\n\t\tnewVal += val[c].substring(0,1).toUpperCase() + val[c].substring(1,val[c].length) + \' \';\n\t}\n\tobj.value = LTrim(RTrim(newVal));\n}\n\nfunction capitalizeAll(obj) {\n\tval = obj.value;\n\tnewVal = val.toUpperCase();\n\tobj.value = newVal;\n}\n\n\n;\nfunction onChange_familyname_8523fdda1a864cc69e3f65d272ff0048(_dlgObj){capitalizeFirst(this);};\n\nfunction onChange_address_cd8ab51febd04638b8378823dc88130d(_dlgObj){capitalizeFirst(this);};\nfunction onChange_apt_cb2449484099451a8484ab86f247d7cd(_dlgObj){capitalizeAll(this);};\nfunction onChange_city_da274b7c56f6419baf410a56529f74ad(_dlgObj){capitalizeFirst(this);};\nfunction onChange_state_cdd134d6544941288f0ddce121ee25fd(_dlgObj){capitalizeAll(this);};\nfunction onChange_mother_name_a8c0c1296d844df9b702734168eb1109(_dlgObj){capitalizeFirst(this);};\nfunction onChange_father_name_85b82a6f499843db95abd0489186656b(_dlgObj){capitalizeFirst(this);};\nfunction onChange_DateSigned_8252d2cf0976440a8473e759cf7f6423(_dlgObj){var pObj = _dlgObj.getParentObject(); if(pObj) { \tpObj.setValue(\'DateSigned\',this.value); }};\n\n\n;\n');
 DLG1_DlgObj._functions.runAction_1f8c6f72_a37d_4c3a_aa89_99bb7a8a4d49 = function() {
@@ -921,7 +932,7 @@ else go.__useCachedGrid = true;
 	go.placeHolderValues = '';
 	go.parameterBucket = $gvs('DLG1.PARAMETERBUCKET');
 	go.argumentValueBucket = $gvs('DLG1.ARGUMENTVALUES');
-	go.a5_default_path = 'C_colon_|Users|Administrator|AppData|Local|Temp|AlphaAnywhere|chromeWorkingPreview|';
+	go.a5_default_path = 'C_colon_|A5Webroot|livepreview';
 	go.onLoadCompleteJavascript = 'run:'+callbackId;
 	go._runningInMobilePreview = DLG1_DlgObj._mobilePreview;
 	if(typeof tbiObj != 'undefined' && typeof tbiObj._workingPreviewHost != 'undefined') { 
@@ -971,7 +982,7 @@ else go.__useCachedGrid = true;
 	go.placeHolderValues = '';
 	go.parameterBucket = $gvs('DLG1.PARAMETERBUCKET');
 	go.argumentValueBucket = $gvs('DLG1.ARGUMENTVALUES');
-	go.a5_default_path = 'C_colon_|Users|Administrator|AppData|Local|Temp|AlphaAnywhere|chromeWorkingPreview|';
+	go.a5_default_path = 'C_colon_|A5Webroot|livepreview';
 	go.onLoadCompleteJavascript = 'run:'+callbackId;
 	go._runningInMobilePreview = DLG1_DlgObj._mobilePreview;
 	if(typeof tbiObj != 'undefined' && typeof tbiObj._workingPreviewHost != 'undefined') { 
@@ -1021,7 +1032,7 @@ else go.__useCachedGrid = true;
 	go.placeHolderValues = '';
 	go.parameterBucket = $gvs('DLG1.PARAMETERBUCKET');
 	go.argumentValueBucket = $gvs('DLG1.ARGUMENTVALUES');
-	go.a5_default_path = 'C_colon_|Users|Administrator|AppData|Local|Temp|AlphaAnywhere|chromeWorkingPreview|';
+	go.a5_default_path = 'C_colon_|A5Webroot|livepreview';
 	go.onLoadCompleteJavascript = 'run:'+callbackId;
 	go._runningInMobilePreview = DLG1_DlgObj._mobilePreview;
 	if(typeof tbiObj != 'undefined' && typeof tbiObj._workingPreviewHost != 'undefined') { 
@@ -1623,6 +1634,7 @@ DLG1_DlgObj._listViewSettings['MENULIST'] = {
 	_incrementalRefreshAfterLoad: function() { },
 	_dvmode: 'enter',
 	_hasDetailView: false,
+	_optimizeSync: false,
 	deselectAll: function() { 
 	var _dlgObj = window[this._hostComponentId + '_DlgObj'];
 	_dlgObj.setValue(this.listVariableName,'',true);
@@ -1882,6 +1894,8 @@ if (typeof window['cordova'] == 'undefined') {
 }
 }
 		},
+		_afterRenderComplete: function(e) {
+},
 		_afterAjaxCallback: function() {this._refreshStateMessages();}
 	},
 	onBeforeDestroy: function() {if(this._transient) { 
@@ -4047,7 +4061,8 @@ DLG1_DlgObj.addCustomSchemeForAlphaWkWebView = function(fileURL) {
 					type: f.type,
 					file: f,
 					completed: false,
-					aborted: false
+					aborted: false,
+					lastModified: f.lastModified
 				}
 				arrS3.push(obji)
 			}
@@ -5463,6 +5478,7 @@ DLG1_DlgObj.base64DataToBlob = function(dataURI) {
         byteString = atob(dataURI.split(',')[1]);
     else
         byteString = unescape(dataURI.split(',')[1]);
+        if(typeof byteString == 'undefined') byteString = dataURI;
     // separate out the mime component
     var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
     // write the bytes of the string to a typed array
@@ -13671,9 +13687,10 @@ if(arr) {
   }
  }
 }
-var ele = DLG1_DlgObj.getPointer('CONTAINER_FORGOTPASSWORDLINK'); if(ele) ele.style.display = 'none';
-DLG1_DlgObj.__serverVersion = '8000-5628';
+var ele = DLG1_DlgObj.getPointer('CONTAINER_FORGOTPASSWORDLINK'); if(ele) ele.style.display = 'none';;DLG1_DlgObj.setControlDisplay('LOGINWITHGOOGLE',false);
+DLG1_DlgObj.__serverVersion = '8168-5646';
 DLG1_DlgObj.__guid = '5bc2af4f-9419-46a7-8df4-5b02019e568a';
+DLG1_DlgObj._watchEvents = []
 ;
 ;
 
@@ -13684,6 +13701,7 @@ var _disabled = this.disabled; if(typeof _disabled == 'undefined') _disabled = f
 $e.add('DLG1.V.R1.BUTTON_NEWUSER',A5.d.evnts.click,function(e) {
 var _disabled = this.disabled; if(typeof _disabled == 'undefined') _disabled = false; if(!_disabled) {;var flagLocked = false; if (typeof this._locked != 'undefined') flagLocked = this._locked;  if(!flagLocked) {DLG1_DlgObj.panelSetActive('PANELCARD_NEWUSER'); } ; this._locked = true; flagLocked = true; var that = this; setTimeout(function() { that._locked = false; },300);}
 },this,false,'DLG1.V.R1.BUTTON_NEWUSER');
+
 
 
 
@@ -13961,6 +13979,7 @@ setTimeout(function() {
 
 
 
+
 var listObj = DLG1_DlgObj.getControl('MENULIST');
 if(listObj) listObj._state.recordCount = 3;
 if(listObj) listObj._state.recordCountFormatted = '3';
@@ -14009,8 +14028,8 @@ DLG1_DlgObj.initialized = true;
 
 
 ;
-;DLG1_DlgObj.setValue('allowRegistration','True');
-DLG1_DlgObj.setValue('AllowPayments','True');
+;DLG1_DlgObj.setValue('allowRegistration','True',false);
+DLG1_DlgObj.setValue('AllowPayments','True',false);
 ;;
 ;DLG1_DlgObj.setStateInfo({ _dynamicallyAddedArguments1: ''});//ssi11;
 
@@ -16457,7 +16476,9 @@ var ele2 = document.getElementById('_alphaAnywhereSVGIconsLocal_DLG1');
 if(!ele2) { 
 	var ele = document.createElement('div');
 	ele.id = '_alphaAnywhereSVGIconsLocal_DLG1';
-	ele.style.display = 'none';
+	//ele.style.display = 'none';
+	ele.style.position = 'absolute';
+	ele.style.top = '-10000px';
 	ele.innerHTML = _svg;
 	
 	document.body.appendChild(ele);

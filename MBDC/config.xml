@@ -24,7 +24,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="24" />
     <preference name="android-installLocation" value="internalOnly" />
-	<preference name="phonegap-version" value="cli-9.0.0" />
+	<preference name="phonegap-version" value="cli-10.x.x" />
 	<preference name="EnableViewportScale" value="true" />
 	<preference name="MediaPlaybackRequiresUserAction" value="true" />
 	<preference name="AllowInlineMediaPlayback" value="false" />
@@ -169,4 +169,9 @@
 	<plugin name="cordova-plugin-androidx-adapter" source="npm" />
 	<plugin name="cordova-plugin-camera-with-exif" source="npm" />
 	<plugin name="cordova-plugin-file-transfer" spec="https://github.com/remoorejr/cordova-plugin-file-transfer" source="git" version="1.5.2" />
+	<feature name="https://api.phonegap.com/1.0/battery" />
+	<feature name="https://api.phonegap.com/1.0/contacts" />
+	<feature name="https://api.phonegap.com/1.0/geolocation" />
+	<feature name="https://api.phonegap.com/1.0/media" />
+	<feature name="https://api.phonegap.com/1.0/notification" />
 </widget>

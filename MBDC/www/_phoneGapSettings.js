@@ -17,7 +17,7 @@ function _phoneGapSettings() {
         "disable-cursor": "false",
         "android-minSdkVersion": "24",
         "android-installLocation": "internalOnly",
-        "phonegap-version": "cli-9.0.0",
+        "phonegap-version": "cli-10.x.x",
         "EnableViewportScale": "true",
         "MediaPlaybackRequiresUserAction": "true",
         "AllowInlineMediaPlayback": "false",

@@ -17,7 +17,7 @@ function _phoneGapSettings() {
         "disable-cursor": "false",
         "android-minSdkVersion": "24",
         "android-installLocation": "internalOnly",
-        "phonegap-version": "cli-10.x.x",
+        "phonegap-version": "cli-9.0.0",
         "EnableViewportScale": "true",
         "MediaPlaybackRequiresUserAction": "true",
         "AllowInlineMediaPlayback": "false",
@@ -55,10 +55,11 @@ function _phoneGapSettings() {
         "cordova-plugin-network-information": "npm",
         "cordova-plugin-dialogs": "npm",
         "cordova-plugin-splashscreen": "npm",
-        "cordova-plugin-alpha-wkwebview-file-xhr": "git",
         "cordova-plugin-androidx-adapter": "npm",
         "cordova-plugin-camera-with-exif": "npm",
-        "cordova-plugin-file-transfer": "git"
+        "cordova-plugin-file-transfer": "git",
+        "cordova-plugin-file-transfer": "npm",
+        "cordova-plugin-whitelist": "npm"
     }
 };
 }

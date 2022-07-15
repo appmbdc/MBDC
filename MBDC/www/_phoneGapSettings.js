@@ -58,8 +58,9 @@ function _phoneGapSettings() {
         "cordova-plugin-androidx-adapter": "npm",
         "cordova-plugin-camera-with-exif": "npm",
         "cordova-plugin-file-transfer": "git",
-        "cordova-plugin-file-transfer": "npm",
-        "cordova-plugin-whitelist": "npm"
+        "cordova-plugin-file-transfer": "git",
+        "cordova-plugin-zip": "git",
+        "cordova-plugin-x-toast": "npm"
     }
 };
 }
